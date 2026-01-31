@@ -1,0 +1,139 @@
+NHTSA Recall Number: 22V-445
+Manufacturer: General Motors LLC
+Model: Equinox
+Year: 2022
+Component: Fuel Tank Strap
+Manufacture Dates: September 2021 - March 2022
+Affected Vehicles: Approximately 112,000
+
+Description:
+The fuel tank mounting straps may corrode prematurely, weakening the structural integrity of the straps. In severe cases, a strap can break, allowing the fuel tank to drop from the vehicle while driving. A detached or partially detached fuel tank creates multiple serious safety hazards including fuel leaks, fire risk, road hazards for other vehicles, and loss of vehicle control.
+
+The issue is caused by inadequate corrosion protection coating on the steel mounting straps. When exposed to road salt, moisture, and environmental contaminants, the straps corrode much faster than designed. Vehicles operated in northern climates with road salt exposure or coastal areas with salt air are at higher risk.
+
+The corrosion typically begins at stress points where the straps contact the fuel tank or frame mounting brackets. Visual inspection may show rust, pitting, or thinning of the strap material. In advanced stages, the strap may show visible cracks or separation.
+
+⚠️ WARNING: A fuel leak or detached fuel tank presents serious fire and crash risks. If you notice fuel odor, see fuel dripping under your vehicle, or hear unusual noises from the fuel tank area, stop driving immediately and have the vehicle towed to a dealer.
+
+This recall affects 2022 Chevrolet Equinox models including L, LS, LT, Premier, and RS trim levels with both the 1.5L and 2.0L turbocharged engines.
+
+Remedy:
+GM dealers will inspect the fuel tank mounting straps and replace them with improved corrosion-resistant straps manufactured with enhanced protective coating. The repair procedure includes:
+
+1. Vehicle lift and undercarriage inspection
+2. Fuel tank support with safety jack
+3. Removal of both fuel tank mounting straps
+4. Inspection of fuel tank for damage
+5. Cleaning of mounting surfaces
+6. Installation of new corrosion-resistant straps
+7. Application of additional corrosion protection
+8. Torque verification (40 Nm / 30 lb-ft)
+9. Fuel system pressure test
+10. Road test for proper fuel tank security
+
+The repair takes approximately 2-3 hours. All parts and labor are free.
+
+If significant corrosion damage is found on other components (fuel tank, lines, or mounting brackets), those will also be replaced at no charge.
+
+Owner Action:
+IMMEDIATE inspection recommended if you notice:
+- Strong fuel odor near vehicle
+- Fuel visible under vehicle
+- Wet spots under vehicle after parking
+- Unusual scraping or dragging noises
+- Visible corrosion or rust on fuel tank straps (if visible during tire changes, etc.)
+
+For vehicles in high-corrosion areas (states that use road salt):
+- Schedule inspection as soon as possible
+- Dealers will prioritize these vehicles
+
+For all affected vehicles:
+- Schedule inspection at convenience
+- Visual inspection can be performed during regular service visits
+
+Contact Information:
+- GM Customer Service: 1-800-222-1020
+- Chevrolet Roadside Assistance: 1-800-243-8872
+- GM internal recall number: N222367980
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+High-Risk Areas:
+This recall is especially critical for vehicles operated in:
+- Northern states with winter road salt (salt belt states)
+- Coastal areas with salt air exposure
+- Areas with high humidity
+- Regions with poor road conditions
+
+Interim Safety Measures:
+Until recall repair is completed:
+1. Inspect under vehicle weekly for fuel leaks
+2. Park outdoors away from buildings if fuel odor present
+3. Avoid filling fuel tank completely (maintain ½ to ¾ full)
+4. Monitor for unusual noises from fuel tank area
+5. Have vehicle towed if fuel leak suspected - do not drive
+
+Refueling Safety:
+Until repair completed:
+- Fill fuel tank slowly to avoid splashing
+- Do not overfill or "top off" tank
+- Check for leaks after refueling
+- Wipe up any spilled fuel immediately
+
+Rental Vehicle Reimbursement:
+GM may provide rental vehicle coverage if:
+- Fuel tank cannot be safely driven to dealer
+- Repair requires extended time due to parts availability
+- Contact GM Customer Service to arrange
+
+Coverage details:
+- Up to $40 per day rental reimbursement
+- Maximum 14 days during initial repair period
+- Submit rental receipts within 60 days
+
+Reimbursement for Previous Repairs:
+Owners who have paid for fuel tank strap replacement or related fuel system repairs should submit documentation to GM Customer Service:
+
+Required documentation:
+- Complete repair invoice with VIN
+- Detailed description of repairs performed
+- Photos of damaged parts if available
+- Mileage and date of repair
+
+Submit via:
+- Online: my.gm.com/recalls/reimbursement
+- Email: gm.recalls@gm.com
+- Mail: GM Customer Assistance Center
+        PO Box 33170
+        Detroit, MI 48232-5170
+
+GM will review and respond within 8-10 weeks.
+
+Extended Inspection:
+For vehicles showing strap corrosion, GM recommends:
+- Annual undercarriage inspection
+- Fuel system inspection at each oil change
+- Immediate inspection after driving through heavy road salt
+- Undercarriage washing after winter season
+
+Additional Protection:
+After recall repair, consider:
+- Regular undercarriage washing in winter months
+- Application of undercoating (dealer can recommend products)
+- Inspection during routine maintenance
+
+If Fuel Tank Becomes Detached:
+If you hear a loud dragging noise and suspect the fuel tank has dropped:
+1. Immediately turn on hazard lights
+2. Safely pull over to shoulder
+3. Turn off engine
+4. Exit vehicle and move away
+5. Call emergency services (911) if fuel leak present
+6. Call GM Roadside Assistance for towing: 1-800-243-8872
+
+Online Resources:
+- Recall status check: www.gm.com/recalls
+- Schedule service: myChevrolet mobile app
+- Owner Center: my.gm.com
+- Upload reimbursement docs: my.gm.com/recalls/reimbursement
+- Recall FAQ: www.chevrolet.com/recalls

@@ -1,0 +1,56 @@
+NHTSA Recall Number: 23V-123
+Manufacturer: Toyota
+Model: Camry
+Year: 2023
+Component: Front Passenger Airbag
+Manufacture Dates: January 2023 - March 2023
+Affected Vehicles: Approximately 68,000
+
+Description:
+The front passenger airbag may not deploy properly in a crash due to a defective occupant classification system (OCS) sensor. The OCS sensor, located in the passenger seat, determines whether the seat is occupied and whether deployment of the passenger airbag is appropriate based on the occupant's weight and seating position.
+
+A manufacturing defect in the sensor mat can cause intermittent electrical connections, leading the system to incorrectly classify an adult passenger as a child or to determine the seat is empty when it is occupied. When this occurs, the passenger airbag may be suppressed and will not deploy in a crash, increasing the risk of injury to the front passenger.
+
+The issue is indicated by the passenger airbag status indicator showing "OFF" when an adult is seated in the passenger seat. The problem may occur intermittently based on seat position, passenger movement, or environmental conditions.
+
+This recall affects 2023 Toyota Camry models including LE, SE, XLE, XSE, and TRD trim levels manufactured at the Georgetown, Kentucky assembly plant.
+
+Remedy:
+Toyota dealers will replace the front passenger seat cushion assembly, which includes the occupant classification sensor mat. The new seat cushion contains an improved sensor design that reliably detects occupant presence and classification.
+
+The repair procedure includes:
+- Removal of the passenger seat
+- Replacement of seat cushion with integrated OCS sensor
+- System calibration and testing
+- Verification of proper airbag system operation
+
+The repair takes approximately 1.5 hours and is provided free of charge.
+
+Owner Action:
+Owners should contact their Toyota dealer to schedule a repair appointment. While waiting for repair, owners should:
+
+1. Ensure front passengers are properly seated with seat back upright
+2. Monitor the passenger airbag status indicator when a passenger is seated
+3. If the indicator shows "OFF" with an adult passenger, have the passenger adjust their seating position
+4. Do not place objects on the passenger seat that could interfere with the sensor
+
+Contact Information:
+- Toyota Customer Service: 1-800-331-4331
+- Toyota internal recall number: T23-AIR-01
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Important Safety Information:
+- Children under 13 should always ride in the rear seat
+- Child safety seats should be installed in rear seats
+- Never place a rear-facing child seat in the front passenger seat
+- All occupants should always wear seat belts
+
+The passenger airbag OFF indicator is NORMAL when:
+- The seat is unoccupied
+- A small child or child safety seat is in the passenger seat
+- Objects weighing less than 65 lbs are on the seat
+
+The indicator should show ON when an adult (over 100 lbs) is properly seated.
+
+Owners who have experienced airbag system warnings or have had previous repairs related to the occupant classification system should contact Toyota Customer Service for reimbursement consideration.

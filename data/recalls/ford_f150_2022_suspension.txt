@@ -1,0 +1,65 @@
+NHTSA Recall Number: 22V-891
+Manufacturer: Ford Motor Company
+Model: F-150
+Year: 2022
+Component: Rear Suspension - Leaf Spring
+Manufacture Dates: November 2021 - May 2022
+Affected Vehicles: Approximately 234,000
+
+Description:
+The rear leaf spring assembly may fracture due to improper heat treatment during manufacturing. The leaf springs, which support the rear axle and cargo load, can develop stress cracks at the mounting eye location. If a spring fractures completely, the rear axle may shift position, causing loss of vehicle control, uneven tire wear, and potential separation of the driveshaft.
+
+The defect results from an error in the heat treatment process at the supplier's facility. Springs were heated to incorrect temperatures during hardening, resulting in material that is too brittle and prone to cracking under normal load cycling. The issue is more likely to occur in trucks that regularly carry heavy loads or are operated on rough roads.
+
+Warning signs include clunking noises from the rear suspension, vehicle leaning to one side, uneven ride height, or visible cracks in the leaf springs upon inspection.
+
+This recall affects 2022 Ford F-150 trucks with all cab configurations (Regular, SuperCab, SuperCrew) and bed lengths. Both 2WD and 4WD models are included. XL, XLT, Lariat, King Ranch, Platinum, and Limited trim levels are all affected.
+
+Remedy:
+Ford dealers will inspect both rear leaf springs for cracks or damage. If cracks are found, both leaf springs will be replaced regardless of which side shows damage. If no cracks are found, dealers will apply a protective coating to the spring mounting areas and reinspect the springs.
+
+The repair includes:
+- Visual and magnetic particle inspection of leaf springs
+- Replacement of both rear leaf springs if cracks detected
+- Inspection of spring mounting hardware and U-bolts
+- Rear axle alignment check
+- Road test verification
+
+Repair time is approximately 3-4 hours if replacement is needed, or 1 hour for inspection only. All services are provided free of charge.
+
+Owner Action:
+Owners should have their vehicles inspected as soon as possible, especially if the truck is used for heavy towing or payload. Dealers will prioritize trucks showing symptoms or those used commercially.
+
+Contact Information:
+- Ford Customer Service: 1-866-436-7332
+- Ford internal recall number: 22S35
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Warning Signs Requiring Immediate Inspection:
+- Clunking or banging noises from rear when driving over bumps
+- Vehicle pulling to one side
+- Rear end appears lower on one side
+- Uneven tire wear on rear tires
+- Visible cracks or damage to leaf springs
+- Driveline vibration
+
+Safety Recommendations Until Repair:
+- Reduce cargo loads to minimum necessary
+- Avoid heavy towing
+- Drive cautiously on rough roads
+- Have suspension inspected immediately if symptoms develop
+
+Reimbursement:
+Owners who have paid for leaf spring replacement related to this issue may submit repair receipts to Ford Customer Service for reimbursement consideration. Include:
+- Original repair invoice
+- Vehicle VIN
+- Mileage at time of repair
+- Description of failure symptoms
+
+Ford will review submissions and provide reimbursement for eligible repairs according to the recall remedy.
+
+Additional Resources:
+- Ford's recall website: www.ford.com/recalls
+- Schedule service online through FordPass app
+- Contact your local Ford dealer service department

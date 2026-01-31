@@ -1,0 +1,192 @@
+NHTSA Recall Number: 23V-890
+Manufacturer: Hyundai Motor America
+Model: Tucson
+Year: 2023
+Component: Electronic Parking Brake (EPB) Actuator
+Manufacture Dates: March 2023 - August 2023
+Affected Vehicles: Approximately 92,000
+
+Description:
+The electronic parking brake (EPB) actuator motor may fail due to water intrusion through an improperly sealed cable grommet. When water enters the actuator housing, it causes internal corrosion that can lead to parking brake malfunction. The parking brake may fail to engage when commanded, may not hold the vehicle securely on an incline, or may fail to release properly after engagement.
+
+The defect occurs when the EPB cable routing allows water to travel along the cable into the actuator housing. This is particularly problematic during car washes, heavy rain, or when driving through standing water. Once water enters the actuator, corrosion develops on the motor brushes and internal electronics, progressively degrading functionality.
+
+Symptoms of EPB actuator failure include:
+- "Check EPB" or "EPB Malfunction" warning message on dashboard
+- Parking brake indicator flashing or staying illuminated
+- Grinding or clicking noise when applying parking brake
+- Parking brake fails to hold vehicle on incline
+- Parking brake will not release or releases intermittently
+- Unusual electrical smell from rear brakes
+
+⚠️ PARKING SAFETY: If the parking brake fails to hold the vehicle, there is risk of the vehicle rolling when parked on an incline, potentially causing a crash or injury to people near the vehicle.
+
+This recall affects 2023 Hyundai Tucson SUV models including SE, SEL, SEL Convenience, N Line, Limited, and Ultimate trim levels in both FWD and AWD configurations.
+
+Remedy:
+Hyundai dealers will inspect both rear parking brake actuators and replace them with improved units that feature enhanced water sealing and corrosion-resistant internal components. The cable routing will also be modified to prevent water migration.
+
+Repair procedure includes:
+- Inspection of both rear brake calipers and EPB actuators
+- Replacement of EPB actuators (both sides)
+- Installation of improved cable sealing grommets
+- Rerouting of EPB cables to prevent water intrusion
+- Software update to EPB control module (version EPB-23.4)
+- Functional testing of EPB operation (multiple engage/release cycles)
+- Hill hold verification test
+- Road test confirmation
+
+Both rear actuators will be replaced regardless of which side shows symptoms, as the defect affects both sides equally.
+
+Repair time is approximately 2.5-3 hours. All parts and labor are free.
+
+Owner Action:
+If you see EPB warning messages or experience parking brake issues:
+
+IMMEDIATE actions for safety:
+1. Use extra caution when parking on inclines
+2. Turn front wheels toward curb (if parked on uphill slope) or away from curb (if downhill)
+3. Leave transmission in Park (automatic) or in gear (manual)
+4. Use wheel chocks if available
+5. Do not rely on parking brake alone until repair completed
+6. Schedule immediate dealer service
+
+For vehicles without symptoms:
+- Schedule service at your convenience
+- Preventive replacement will avoid future failures
+- Can be combined with other scheduled maintenance
+
+Contact Information:
+- Hyundai Consumer Affairs: 1-855-371-9460
+- Hyundai Roadside Assistance: 1-800-243-7766
+- Hyundai internal recall number: 237
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Parking Guidelines Until Repair:
+To safely park your vehicle until recall service is completed:
+
+On level ground:
+- Apply parking brake as normal
+- Verify parking brake warning light illuminates on dash
+- Leave transmission in Park (or in gear for manual)
+- If EPB malfunction warning appears, do not rely on parking brake
+
+On inclines:
+- Turn wheels appropriately (toward curb if facing uphill, away from curb if facing downhill)
+- Leave transmission in Park or in gear
+- Apply parking brake but do not rely on it alone
+- Consider using wheel chocks for added safety
+- Park on level ground whenever possible
+
+NEVER:
+- Leave vehicle with only parking brake engaged on incline
+- Park on steep inclines until repair completed
+- Leave children or pets unattended in parked vehicle
+- Assume parking brake will hold if warning messages present
+
+Car Wash Precautions:
+Until repair is completed, water intrusion risk can be minimized by:
+- Using touchless car washes rather than high-pressure washes
+- Avoiding driving through deep standing water
+- Parking indoors during heavy rain when possible
+- Having dealer inspect actuators after significant water exposure
+
+Emergency Brake Release:
+If parking brake fails to release:
+1. Ensure vehicle is on level ground
+2. Engine running, transmission in Park
+3. Try EPB release button multiple times
+4. If still stuck, contact Hyundai Roadside Assistance
+5. Do not attempt to drive with parking brake engaged
+6. Manual release procedure available in owner's manual (emergency use only)
+
+Rental Vehicle Assistance:
+If your vehicle requires extended repair time or cannot be safely parked:
+- Hyundai will provide rental vehicle reimbursement
+- Up to $45 per day
+- Maximum 14 days during repair period
+- Submit rental receipts to Hyundai Consumer Affairs
+- Must include copy of dealer repair order
+
+Reimbursement for Previous Repairs:
+Owners who have already paid for EPB actuator replacement or related repairs should submit documentation:
+
+Required documents:
+- Original repair invoice showing VIN
+- Detailed parts and labor breakdown
+- Description of EPB symptoms
+- Date and mileage at time of repair
+- Proof of payment
+
+Submit reimbursement claim:
+- Online: www.hyundaiusa.com/us/en/recall-reimbursement
+- Email: consumeraffairs@hmausa.com
+- Phone: 1-855-371-9460
+- Mail: Hyundai Consumer Affairs - Recall Reimbursement
+        10550 Talbert Avenue
+        Fountain Valley, CA 92708
+
+Processing time: 6-8 weeks
+
+Extended EPB Warranty:
+Hyundai is providing extended warranty coverage for EPB-related issues:
+- 10 years / 100,000 miles from original purchase date
+- Covers EPB actuators, control module, switches, and wiring
+- No deductible for covered repairs
+- Coverage transfers to subsequent owners
+- Effective immediately for all affected vehicles
+
+Diagnostic Information:
+Common diagnostic trouble codes related to this issue:
+- C1611 - EPB Left Actuator Motor Error
+- C1612 - EPB Right Actuator Motor Error
+- C1613 - EPB Control Module Communication Error
+- C1A15 - EPB Force Control Error
+
+If your check engine light or EPB warning appears, have the codes read at a dealer or auto parts store. Provide these codes when scheduling service.
+
+Winter Driving Considerations:
+In cold climates where road salt is used:
+- Road salt accelerates corrosion of water-exposed actuators
+- Have actuators inspected if vehicle is regularly driven in winter conditions
+- Clean undercarriage regularly to remove salt buildup
+- Schedule recall service before winter season if possible
+
+Post-Repair Care:
+After recall repair is completed:
+- Test EPB function monthly (engage and release several times)
+- Monitor for any warning messages
+- Report any EPB issues immediately to dealer
+- Keep repair documentation for vehicle service history
+
+Hill Start Assist:
+Your vehicle's hill start assist system operates independently of the parking brake. Hill start assist will continue to function normally even if EPB has issues.
+
+Additional Safety Systems:
+These systems are not affected by this recall:
+- Service brakes (regular braking system)
+- Anti-lock braking system (ABS)
+- Electronic stability control (ESC)
+- Hill start assist
+- Emergency braking assistance
+
+Online Resources:
+- Check recall status: www.hyundaiusa.com/us/en/recall-information
+- MyHyundai app: Schedule service and check vehicle info
+- Owner's portal: www.myHyundai.com
+- Find dealer: www.hyundaiusa.com/us/en/dealers
+- Download owner's manual: www.hyundaiusa.com/us/en/resources/owners
+- Sign up for recall email alerts
+
+Technical Support:
+For detailed technical questions, owners may contact:
+Hyundai Product Investigation Team
+Email: safety@hmausa.com
+Phone: 1-855-371-9460
+
+Report Safety Issues:
+If you experience a crash or injury related to EPB failure:
+- Report to NHTSA: www.safercar.gov or 1-888-327-4236
+- Report to Hyundai: 1-855-371-9460
+- File a complaint with your state consumer protection agency

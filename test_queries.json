@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "query": "What recalls affect 2023 Honda Civic models?",
+    "expected_behavior": "Should retrieve and mention both fuel pump recall (23V-456) and camera recall (23V-789)",
+    "required_elements": ["23V-456", "fuel pump", "23V-789", "camera"],
+    "difficulty": "medium",
+    "skills_tested": ["RAG retrieval", "multi-document synthesis", "response formatting"]
+  },
+  {
+    "id": 2,
+    "query": "Is VIN 2HGFC2F59MH123456 affected by any recalls?",
+    "expected_behavior": "Should call VIN API, find it's affected by 21V-234, retrieve details about transmission recall for 2021 Honda Accord",
+    "required_elements": ["21V-234", "transmission", "Honda Accord", "2021"],
+    "difficulty": "hard",
+    "skills_tested": ["VIN API integration", "RAG retrieval", "data synthesis", "structured response"]
+  },
+  {
+    "id": 3,
+    "query": "Tell me about Toyota RAV4 brake recalls",
+    "expected_behavior": "Should retrieve 22V-567 brake system recall for 2022 RAV4 and identify it as safety-critical",
+    "required_elements": ["22V-567", "brake", "RAV4", "2022"],
+    "difficulty": "easy",
+    "skills_tested": ["RAG retrieval", "safety awareness", "response clarity"]
+  },
+  {
+    "id": 4,
+    "query": "Are there any Tesla Model 3 recalls?",
+    "expected_behavior": "Should find 23V-334 steering recall for 2023 Model 3",
+    "required_elements": ["Tesla", "Model 3", "recall", "steering"],
+    "difficulty": "easy",
+    "skills_tested": ["RAG retrieval", "brand recognition", "basic response"]
+  },
+  {
+    "id": 5,
+    "query": "Is VIN 1HGCM82633A123456 affected by recalls?",
+    "expected_behavior": "Should call VIN API and correctly report no recalls found for this VIN",
+    "required_elements": ["not affected", "no recalls"],
+    "difficulty": "medium",
+    "skills_tested": ["VIN API integration", "negative result handling", "clear communication"]
+  }
+]

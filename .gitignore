@@ -1,0 +1,17 @@
+# Environment variables
+.env
+.env.local
+
+# Virtual environment
+venv/
+
+# ChromaDB database (contains indexed documents)
+chroma_db/
+Backup chroma db content/
+
+# Log files (contains user queries and LLM responses)
+logs/
+
+# Python cache
+__pycache__/
+*.pyc

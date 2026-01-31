@@ -1,0 +1,230 @@
+NHTSA Recall Number: 22V-334
+Manufacturer: Hyundai Motor America
+Model: Sonata
+Year: 2022
+Component: Engine Control Unit (ECU) Software
+Manufacture Dates: January 2022 - December 2022
+Affected Vehicles: Approximately 156,000
+
+Description:
+The engine control unit (ECU) software may incorrectly interpret signals from the crankshaft position sensor during certain driving conditions, causing the engine to stall unexpectedly while driving. When the ECU misreads sensor data, it may cut fuel delivery or spark timing, resulting in sudden engine shutdown without warning. An unexpected engine stall while driving eliminates power steering assist and brake assist, increases stopping distances, and significantly increases the risk of a crash.
+
+The software error is most likely to occur during:
+- Rapid acceleration followed by sudden deceleration
+- Frequent stop-and-go traffic patterns
+- Hot ambient temperatures (above 95°F / 35°C)
+- When engine is at full operating temperature
+- During transitions between cruise control and manual throttle
+
+The stall condition is intermittent and may not occur every time the vehicle is driven. Some vehicles may go weeks or months between stall events, while others may experience multiple stalls in a short period.
+
+Warning signs before a stall may include:
+- Brief hesitation or stumble during acceleration
+- Momentary loss of throttle response
+- Check engine light (may illuminate briefly then reset)
+- Engine RPM fluctuation
+- Loss of power for 1-2 seconds followed by recovery
+
+⚠️ CRITICAL SAFETY CONCERN: An engine stall in traffic or at highway speeds creates serious crash risk. Loss of power steering and brake assist makes vehicle control difficult.
+
+This recall affects all 2022 Hyundai Sonata sedan models including SE, SEL, SEL Plus, N Line, and Limited trim levels equipped with the 2.5L naturally aspirated engine (engine code G4KJ). Hybrid models and turbocharged engines are not affected.
+
+Remedy:
+Hyundai dealers will update the engine control unit (ECU) software to version E22-04 or later, which corrects the sensor interpretation algorithms and improves fault detection. The software update also enhances engine control strategies to prevent misreading of crankshaft position signals.
+
+The repair procedure includes:
+- Diagnostic scan for any stored fault codes
+- ECU software update via J2534 programming interface
+- Crankshaft position sensor signal verification
+- Idle stability test
+- Road test including acceleration/deceleration cycles
+- Verification of fix with diagnostic monitoring
+
+The software update takes approximately 45-60 minutes. No hardware replacement is required. All services are provided free of charge.
+
+Owner Action:
+If your engine stalls while driving:
+
+IMMEDIATE actions for safety:
+1. Firmly apply brakes (they will still work but require more pressure)
+2. Steer to roadside using increased steering effort
+3. Turn on hazard flashers
+4. Attempt restart once safely stopped
+5. If restart is successful, drive cautiously to nearest dealer
+6. If restart fails, call for towing
+7. Do not continue driving if multiple stalls occur
+
+For vehicles that have not stalled:
+- Schedule software update at your convenience
+- Update can typically be completed while you wait
+- Update is preventive and will eliminate stall risk
+
+Contact Information:
+- Hyundai Consumer Affairs: 1-855-371-9460
+- Hyundai Roadside Assistance: 1-800-243-7766 (free towing to dealer)
+- Hyundai internal recall number: 237
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Driving Guidelines Until Update:
+To minimize stall risk until software update is completed:
+- Avoid aggressive driving patterns (rapid acceleration/deceleration)
+- Maintain steady speeds when possible
+- Use cruise control on highway for consistent speed
+- Be prepared for potential stall (maintain extra following distance)
+- Plan route with safe pull-off areas if possible
+
+If stall occurs:
+- Brakes and steering still function (with increased effort required)
+- Vehicle can usually be restarted immediately
+- Power steering and brake assist will return once engine restarts
+- Multiple stalls indicate urgent need for software update
+
+What Does NOT Work During Stall:
+- Power steering assist (steering wheel very heavy)
+- Power brake assist (brake pedal very hard)
+- Climate control
+- Infotainment system
+- Cruise control
+
+What STILL Works:
+- Service brakes (manual braking - press hard)
+- Steering (manual steering - turn hard)
+- Hazard flashers
+- Headlights (if already on)
+- Seat belts
+
+Technical Details:
+Affected ECU part numbers:
+- 39110-L5550
+- 39110-L5551
+- 39110-L5552
+- 39110-L5553
+
+Updated software version: E22-04 or later
+Programming time: ~45 minutes
+Additional calibrations performed: Idle control, throttle response, knock sensor sensitivity
+
+Diagnostic Trouble Codes:
+Common codes related to this issue:
+- P0335 - Crankshaft Position Sensor Circuit Malfunction
+- P0336 - Crankshaft Position Sensor Range/Performance
+- P0641 - Sensor Reference Voltage Circuit Open
+- P2610 - ECM/PCM Internal Engine Off Timer Performance
+
+If your check engine light illuminates, have codes read and provide them when scheduling service.
+
+Alternative Transportation:
+For vehicles that experience frequent stalling making them unsafe to drive:
+- Hyundai will provide rental vehicle reimbursement
+- Up to $40 per day
+- Maximum 7 days until software update completed
+- Requires dealer documentation of stalling condition
+- Submit rental receipts to Hyundai Consumer Affairs
+
+Parts Availability:
+This recall requires no parts - only software update. All dealers have immediate access to updated software via Hyundai's secure programming portal. No waiting for parts shipments.
+
+Appointment Scheduling:
+- Most dealers can complete update same-day or next-day
+- Call ahead to schedule programming appointment
+- Bring vehicle with at least 1/2 tank of fuel
+- Battery must be in good condition (will be tested prior to programming)
+- Plan for 1-1.5 hours at dealership
+
+Post-Update Verification:
+After software update is completed:
+- Dealer will perform road test with diagnostic monitoring
+- Multiple acceleration/deceleration cycles to verify fix
+- Check for any remaining fault codes
+- Idle stability verification
+- You'll receive repair order documenting update completion
+
+Reimbursement for Previous Repairs:
+Owners who have paid for ECU replacement, crankshaft sensor replacement, or diagnostic services related to stalling should contact Hyundai:
+
+Eligible expenses:
+- ECU software updates (if paid for at dealer)
+- ECU replacement
+- Crankshaft position sensor replacement for stalling symptoms
+- Diagnostic time related to stalling investigation
+- Towing costs due to stalling
+
+Documentation required:
+- Complete repair invoice with VIN
+- Description of stalling symptoms
+- Diagnostic trouble codes
+- Date and mileage of service
+- Payment receipts
+
+Submit claims:
+- Online: www.hyundaiusa.com/us/en/recall-reimbursement
+- Phone: 1-855-371-9460 (reference recall 237)
+- Email: consumeraffairs@hmausa.com
+- Mail: Hyundai Consumer Affairs
+        10550 Talbert Avenue
+        Fountain Valley, CA 92708
+
+Extended Powertrain Warranty:
+Hyundai is extending powertrain warranty coverage for stalling-related issues:
+- Additional 2 years / 24,000 miles beyond original warranty
+- Covers ECU, sensors, and related electrical components for stalling
+- No deductible
+- Coverage effective immediately after software update
+- Transfers to subsequent owners
+
+Related Service Bulletins:
+Dealers have been provided with these related technical bulletins:
+- TSB 22-EN-012 - Engine Stall During Driving
+- TSB 22-EN-018 - ECU Software Update Procedures
+- TSB 22-EN-024 - Crankshaft Position Sensor Testing
+
+Additional Updates Included:
+The ECU software update also includes improvements for:
+- Fuel economy optimization
+- Smoother idle quality
+- Enhanced cold-start performance
+- Improved throttle response
+- Updated emissions control strategies
+
+Fleet Vehicles:
+Commercial fleet operators with affected vehicles should contact:
+Hyundai Fleet Department: 1-800-633-5151
+Email: fleet@hmausa.com
+
+Priority scheduling available for fleet vehicles to minimize downtime.
+
+Software Update Cannot Be "Undone":
+Once the update is installed, it permanently replaces the previous software version. The update cannot be reversed or removed.
+
+Battery Condition:
+Ensure your battery is in good condition before scheduling update appointment. Weak batteries can cause programming failures. Dealer will test battery before beginning update and replace if necessary (additional charge may apply for battery if not covered by warranty).
+
+Additional Monitoring:
+After software update, monitor vehicle for:
+- Normal engine operation
+- No stalling or hesitation
+- Check engine light remains off
+- Smooth acceleration and deceleration
+- Normal idle
+
+Report any issues to dealer immediately for additional diagnosis.
+
+Online Resources:
+- Check recall status and schedule service: www.myHyundai.com
+- Download owner's manual: www.hyundaiusa.com/us/en/resources
+- Find nearest dealer: www.hyundaiusa.com/us/en/dealers
+- MyHyundai mobile app for appointment scheduling
+- Recall FAQ: www.hyundaiusa.com/us/en/recall-information
+- Sign up for safety recall email notifications
+
+Customer Support:
+Hyundai Consumer Affairs: 1-855-371-9460
+Monday-Friday: 5:00 AM - 7:00 PM PST
+Saturday-Sunday: 6:30 AM - 3:00 PM PST
+
+Email: consumeraffairs@hmausa.com
+Response time: 2-3 business days
+
+For Urgent Safety Concerns:
+Hyundai Safety Hotline: 1-855-371-9460 (24/7)

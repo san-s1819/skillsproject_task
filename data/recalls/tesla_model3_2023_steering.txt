@@ -1,0 +1,79 @@
+NHTSA Recall Number: 23V-334
+Manufacturer: Tesla, Inc.
+Model: Model 3
+Year: 2023
+Component: Power Steering System - Inverter Assembly
+Manufacture Dates: October 2022 - December 2022
+Affected Vehicles: Approximately 35,000
+
+Description:
+The electric power steering (EPS) inverter may experience a hardware fault that causes sudden loss of power steering assist. When this occurs, steering becomes significantly heavier and requires much more physical effort to turn the wheel, particularly at low speeds. While the vehicle remains steerable, the increased effort required could surprise the driver and potentially lead to a crash, especially in emergency maneuvers.
+
+The fault is caused by a defective power transistor in the EPS inverter circuit board. The transistor can fail due to thermal stress when the vehicle is operated in very cold conditions (below 0°F / -18°C). When the transistor fails, the inverter shuts down and power steering assist is lost. The vehicle's instrument cluster will display a warning message: "Power Steering System Fault - Schedule Service."
+
+The issue only affects power steering assistance. Manual steering capability is always maintained, and the vehicle can be safely controlled with increased steering effort.
+
+This recall affects 2023 Tesla Model 3 vehicles in all trim levels (Rear-Wheel Drive, Long Range, and Performance) manufactured at the Fremont, California facility during the affected date range.
+
+Remedy:
+Tesla will replace the electric power steering inverter assembly with an updated version that uses improved power transistors rated for extended temperature ranges. The software will also be updated to provide additional fault monitoring and driver warnings.
+
+The repair procedure includes:
+- Replacement of EPS inverter assembly
+- Software update to version 2023.38.5 or later
+- System calibration and functional testing
+- Verification of steering feel and response
+
+The repair is performed at Tesla Service Centers and takes approximately 2 hours. All parts, labor, and software updates are provided at no cost to the owner.
+
+Owner Action:
+Tesla will notify affected owners via email and in-vehicle notification. Owners can also check their vehicle's recall status through the Tesla mobile app.
+
+If you experience loss of power steering assist:
+1. Maintain firm grip on steering wheel
+2. Continue steering with increased effort
+3. Safely pull over when possible
+4. Contact Tesla Service immediately
+5. Vehicle can be driven to Service Center if needed, though increased steering effort will be required
+
+For proactive recall service, owners may:
+- Schedule service through the Tesla mobile app
+- Call Tesla Service: 1-877-798-3752
+- Visit www.tesla.com/support/recalls
+- Contact nearest Tesla Service Center
+
+Tesla internal recall number: SB-23-33-008
+NHTSA hotline: 1-888-327-4236
+Website: www.safercar.gov
+
+Technical Information:
+- Steering will NOT lock up - manual steering always functional
+- Additional effort required ranges from 2-4x normal depending on speed
+- Parking and low-speed maneuvers require the most effort
+- Highway driving is less affected due to lower steering inputs needed
+- Warning message will always appear before loss of assist
+
+Cold Weather Considerations:
+The fault is more likely in extreme cold (below 0°F). Until repair is completed:
+- Allow vehicle to warm up in cold conditions when possible
+- Be prepared for potential loss of power assist in extreme cold
+- If loss of assist occurs, continue driving safely to destination
+- Schedule service before winter if in cold climate region
+
+Over-the-Air Update:
+For vehicles experiencing intermittent issues, Tesla may deploy an interim software update that provides additional warnings before complete assist loss. This does not eliminate the need for hardware replacement.
+
+Mobile Service:
+Tesla Mobile Service may be able to perform this recall repair at your location depending on parts availability and service capacity. Request mobile service through the Tesla app when scheduling.
+
+Loaner Vehicles:
+Tesla may provide a loaner vehicle if repair time exceeds 4 hours or if your vehicle is not driveable to the Service Center. Contact Tesla Service to arrange.
+
+Reimbursement:
+Owners who have already paid for EPS inverter replacement related to this issue should submit repair documentation through the Tesla app or by emailing service-reimburse@tesla.com with:
+- Service invoice
+- Vehicle VIN
+- Payment receipt
+- Description of symptoms
+
+Tesla will review and process eligible reimbursement requests within 4-6 weeks.

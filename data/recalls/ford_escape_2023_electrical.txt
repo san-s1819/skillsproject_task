@@ -1,0 +1,83 @@
+NHTSA Recall Number: 23V-445
+Manufacturer: Ford Motor Company
+Model: Escape
+Year: 2023
+Component: Battery Junction Box (BJB)
+Manufacture Dates: July 2022 - January 2023
+Affected Vehicles: Approximately 95,000
+
+Description:
+The battery junction box (BJB), which houses the main electrical fuses and relays, may overheat due to insufficient electrical contact in the main power distribution terminals. The poor connection creates electrical resistance, generating excessive heat that can melt internal components, damage wiring, and in extreme cases, cause an electrical fire.
+
+The issue is caused by undertorqued terminal connections during manufacturing. As electrical loads cycle through the BJB during normal vehicle operation, the loose connections heat up and can cause progressive damage to the junction box housing and surrounding components.
+
+Owners may notice symptoms including:
+- Burning smell from engine compartment
+- Electrical system warning lights
+- Intermittent loss of power accessories
+- Battery warning light
+- Visible melting or discoloration of BJB cover
+
+⚠️ FIRE RISK: This recall involves a potential fire hazard. If you smell burning plastic or see smoke from the engine compartment, immediately turn off the vehicle, exit the vehicle, and move away from it. Call 911 if fire is present.
+
+This recall affects 2023 Ford Escape models including S, SE, SEL, and Titanium trim levels with both the 1.5L EcoBoost and 2.0L EcoBoost engines. Hybrid and plug-in hybrid models are not affected.
+
+Remedy:
+Ford dealers will inspect the battery junction box for signs of overheating or damage. The repair procedure includes:
+
+For all vehicles:
+- Remove and inspect the BJB
+- Check terminal torque specifications
+- Inspect wiring harness for heat damage
+
+If damage is found:
+- Replace battery junction box assembly
+- Replace damaged wiring harness sections
+- Install protective heat shield
+- Verify all electrical system functions
+
+If no damage is found:
+- Retorque all BJB terminals to specification
+- Apply dielectric grease to connections
+- Install updated BJB cover with improved ventilation
+
+Repair time ranges from 1-4 hours depending on extent of damage. All parts and labor are free.
+
+Owner Action:
+IMMEDIATE inspection is recommended if you experience:
+- Any burning smell from the engine compartment
+- Smoke from under the hood
+- Multiple electrical warning lights
+- Intermittent electrical system failures
+
+For vehicles without symptoms, schedule inspection at your earliest convenience.
+
+Contact Information:
+- Ford Customer Service: 1-866-436-7332
+- Ford internal recall number: 23C18
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Interim Safety Guidance:
+Until the recall repair is completed:
+1. Park the vehicle outdoors away from structures if possible
+2. Do not park in garages overnight
+3. Monitor for burning smells or electrical issues
+4. If warning lights appear, have the vehicle inspected immediately
+5. Do not jump-start the vehicle or use high-current accessories for extended periods
+
+Alternative Transportation:
+Ford may provide rental vehicle reimbursement or alternative transportation for vehicles showing symptoms of the defect while awaiting repair. Contact Ford Customer Service for details.
+
+Reimbursement:
+Owners who have already paid for BJB replacement or electrical repairs related to this issue should contact Ford Customer Service with:
+- Original repair invoice and receipts
+- Vehicle VIN and mileage at repair
+- Description of symptoms and diagnosis
+- Photos of damage if available
+
+Online Resources:
+- Check recall status by VIN: www.ford.com/recalls
+- Schedule service through FordPass app
+- View recall details and FAQs on Ford's owner website
+- Sign up for recall notifications via email

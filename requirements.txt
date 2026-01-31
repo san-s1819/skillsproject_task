@@ -1,0 +1,6 @@
+# Ultra-minimal dependencies for space-constrained VMs
+# Direct REST API calls (no heavy SDKs)
+# Total install size: ~30MB
+chromadb==0.5.23
+scikit-learn==1.6.1
+requests==2.32.3

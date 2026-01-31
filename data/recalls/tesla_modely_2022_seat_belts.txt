@@ -1,0 +1,98 @@
+NHTSA Recall Number: 22V-678
+Manufacturer: Tesla, Inc.
+Model: Model Y
+Year: 2022
+Component: Second Row Seat Belts - Left Side
+Manufacture Dates: June 2022 - August 2022
+Affected Vehicles: Approximately 48,000
+
+Description:
+The left second-row seat belt may not have been properly connected to the anchor point during vehicle assembly. If the seat belt is not securely attached, it will not restrain an occupant properly in a crash, significantly increasing the risk of injury.
+
+The issue was identified during a quality audit at Tesla's Austin, Texas manufacturing facility. Investigation revealed that during a specific production period, assembly line workers may have installed the seat belt anchor bolt without properly threading it into the floor mounting point. The bolt may appear secure but can pull free under load.
+
+Visual inspection alone may not reveal the defect. The seat belt webbing and buckle appear normal, but the anchor point connection may be improperly secured. A physical pull test is required to verify proper attachment.
+
+This recall only affects the left second-row seat belt (behind the driver). The right second-row seat belt, front seat belts, and third-row seat belts (if equipped) are not affected by this issue.
+
+Affected vehicles are 2022 Tesla Model Y models including Long Range and Performance variants built at the Austin Gigafactory during the specified date range.
+
+Remedy:
+Tesla Service Centers will inspect and properly secure the left second-row seat belt anchor point. The repair procedure includes:
+
+1. Removal of floor trim panel to access anchor point
+2. Inspection of anchor bolt installation
+3. Removal and reinstallation of anchor bolt if improperly threaded
+4. Torque verification to specification (35 Nm / 26 lb-ft)
+5. Physical pull test to verify secure attachment (250 lbs minimum)
+6. Reinstallation of trim panel
+7. Final inspection and documentation
+
+The repair takes approximately 30-45 minutes and is provided free of charge.
+
+Owner Action:
+Do not use the left second-row seating position until the recall repair has been completed. If the seat belt is not properly anchored, it will not provide protection in a crash.
+
+Temporary seating arrangements:
+- Rear passengers should use the right second-row seat
+- If three rear passengers are needed, have the vehicle inspected immediately
+- Do not install child safety seats in the left second-row position
+- Third-row seats (if equipped) are not affected and may be used normally
+
+Scheduling service:
+- Use the Tesla mobile app to schedule service
+- Select "Recall Repair" as service type
+- Most appointments can be completed same-day or next-day
+- Tesla Service: 1-877-798-3752
+
+Tesla internal recall number: SB-22-00-016
+NHTSA hotline: 1-888-327-4236
+Website: www.safercar.gov
+
+Verification for Owners:
+While awaiting service, owners can perform a simple check (do not rely on this as confirmation of proper installation):
+
+⚠️ WARNING: This check does not definitively verify proper installation. Professional inspection is still required.
+
+1. Ensure seat belt is unbuckled
+2. Firmly grasp seat belt webbing near floor anchor
+3. Pull straight up with firm, steady force
+4. If anchor point moves or feels loose, DO NOT use this seating position
+5. Schedule immediate service
+
+Mobile Service Availability:
+This recall can be performed by Tesla Mobile Service. When scheduling through the app, indicate your preference for mobile service. A technician can come to your home or workplace if you're within the mobile service area.
+
+Loaner/Rental:
+If you need the left second-row seat for essential travel and cannot wait for an appointment, contact Tesla Service about loaner vehicle availability. Tesla may provide alternatives for customers requiring immediate seating capacity.
+
+Urgent Scheduling:
+Customers who regularly transport children or require use of all seating positions will be prioritized for scheduling. Inform the service scheduler of your situation when booking.
+
+Additional Safety Information:
+- All seat belts should be inspected regularly for wear and damage
+- Ensure all passengers buckle up before driving
+- Never modify or alter seat belt components
+- Seat belts should fit snugly but comfortably
+- For child passengers, use appropriate child safety seats properly installed
+
+Documentation:
+After repair completion, Tesla will:
+- Provide service record in your Tesla account
+- Email confirmation of recall completion
+- Update vehicle service history
+- Record repair in NHTSA database
+
+No further action is needed after documented completion.
+
+Questions or Concerns:
+Contact Tesla Customer Support:
+- Phone: 1-877-798-3752
+- Email: support@tesla.com
+- Tesla app messaging
+- www.tesla.com/support
+
+For NHTSA-related questions:
+- Hotline: 1-888-327-4236
+- Website: www.safercar.gov
+- Email: NHTSA.safercar.gov

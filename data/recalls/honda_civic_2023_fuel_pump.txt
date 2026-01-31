@@ -1,0 +1,28 @@
+NHTSA Recall Number: 23V-456
+Manufacturer: Honda
+Model: Civic
+Year: 2023
+Component: Fuel Pump
+Manufacture Dates: March 2023 - August 2023
+Affected Vehicles: Approximately 50,000
+
+Description:
+The fuel pump may fail due to a manufacturing defect in the impeller component. When the impeller fails, the fuel pump stops delivering fuel to the engine, causing the engine to stall while driving. This sudden loss of power increases the risk of a crash, particularly in high-speed traffic situations.
+
+The defect was discovered during quality control testing at Honda's manufacturing facility. Internal investigation revealed that a supplier error resulted in impellers being manufactured with insufficient material thickness, leading to premature cracking under normal operating conditions.
+
+Remedy:
+Honda will notify all affected vehicle owners by mail. Authorized Honda dealers will inspect and replace the fuel pump assembly free of charge. The replacement fuel pumps have been manufactured to correct specifications and do not exhibit the defect. The repair typically takes 2-3 hours to complete.
+
+Owner notification letters are expected to be mailed by July 15, 2023. Owners who have already paid for repairs related to this issue may be eligible for reimbursement.
+
+Owner Action:
+Owners may contact Honda customer service at 1-888-234-2138. Honda's internal number for this recall is R23-045. Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or visit www.safercar.gov.
+
+Dealers should schedule repairs as soon as possible for affected customers. Priority should be given to vehicles showing symptoms of fuel delivery issues.
+
+Warning Signs:
+- Engine sputtering or hesitation during acceleration
+- Difficulty starting the vehicle
+- Engine stalling while driving
+- Fuel pressure warning light illuminated

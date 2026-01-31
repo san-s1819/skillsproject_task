@@ -1,0 +1,30 @@
+NHTSA Recall Number: 23V-789
+Manufacturer: Honda
+Model: Civic
+Year: 2023
+Component: Rearview Camera System
+Manufacture Dates: January 2023 - December 2023
+Affected Vehicles: Approximately 125,000
+
+Description:
+The rearview camera display may experience intermittent failure due to a software error in the infotainment system. The camera image may freeze, display a black screen, or show distorted video when the vehicle is shifted into reverse. This reduces the driver's rearward visibility and increases the risk of backing into objects, pedestrians, or other vehicles.
+
+The issue occurs when the camera system's initialization sequence conflicts with other infotainment functions. The failure is most likely to occur during cold weather conditions or immediately after vehicle startup. The camera functionality typically returns after cycling the ignition, but may fail again during subsequent reverse operations.
+
+This recall affects all 2023 Honda Civic trim levels including LX, Sport, EX, EX-L, and Touring models equipped with the Honda Display Audio system.
+
+Remedy:
+Honda dealers will update the infotainment system software to version 4.2.1, which resolves the camera initialization conflict. The software update is performed through the vehicle's USB port and takes approximately 30 minutes to complete. No hardware replacement is necessary.
+
+The update also includes improvements to system boot time and Bluetooth connectivity. All updates will be performed free of charge.
+
+Owner Action:
+Owners should contact their nearest Honda dealer to schedule a software update appointment. This service can typically be performed while the customer waits. Honda customer service can be reached at 1-888-234-2138. Honda's internal recall number is R23-067.
+
+Temporary Workaround:
+If the rearview camera fails, drivers should:
+1. Use exterior mirrors and direct visual observation when backing
+2. Cycle the ignition to attempt to restore camera function
+3. Schedule a dealer appointment for the software update as soon as possible
+
+Owners may also contact NHTSA at 1-888-327-4236 or visit www.safercar.gov.

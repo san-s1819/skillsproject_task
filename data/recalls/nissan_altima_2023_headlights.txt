@@ -1,0 +1,145 @@
+NHTSA Recall Number: 23V-678
+Manufacturer: Nissan North America, Inc.
+Model: Altima
+Year: 2023
+Component: Headlight Assembly - LED Driver Module
+Manufacture Dates: May 2023 - September 2023
+Affected Vehicles: Approximately 74,000
+
+Description:
+The LED headlight driver module may fail due to a defective voltage regulator circuit. When the module fails, one or both headlights may suddenly stop working, significantly reducing visibility for the driver and making the vehicle less visible to other drivers. This increases the risk of a crash, particularly during nighttime or adverse weather conditions.
+
+The failure occurs when the voltage regulator overheats under continuous operation. High ambient temperatures or prolonged headlight use (such as during extended highway driving at night) accelerate the failure. The headlight may fail completely and not illuminate at all, or it may flicker intermittently before total failure.
+
+Warning signs include:
+- Headlight flickering
+- Dim or reduced light output from one or both headlights
+- Headlight warning indicator on instrument panel
+- One headlight significantly dimmer than the other
+- Complete loss of one or both low-beam headlights
+
+The high-beam function may continue to work even when low-beams fail, providing temporary visibility until repair. Daytime running lights and turn signals are not affected by this issue.
+
+This recall affects 2023 Nissan Altima sedan models including S, SV, SR, SL, and Platinum trim levels equipped with LED headlights. Halogen headlight models are not affected.
+
+Remedy:
+Nissan dealers will inspect both headlight assemblies and replace the LED driver modules with an improved design that includes enhanced thermal management and updated voltage regulator circuitry.
+
+The repair procedure includes:
+- Diagnostic scan for headlight system fault codes
+- Inspection of both headlight assemblies
+- Replacement of LED driver modules in both headlights
+- Software update to headlight control system (version H23-001 or later)
+- Functional verification of all lighting functions
+- Light aim adjustment and verification
+
+Even if only one headlight has failed, both LED driver modules will be replaced to prevent future failure of the other side.
+
+Repair time is approximately 1.5-2 hours. All parts, labor, and software updates are provided free of charge.
+
+Owner Action:
+If you experience headlight failure or flickering:
+
+IMMEDIATE actions if headlights fail while driving:
+1. Turn on high beams if available (may still function)
+2. Turn on hazard flashers to increase visibility
+3. Reduce speed and drive cautiously
+4. Use fog lights if equipped
+5. Pull over safely if visibility is insufficient
+6. Schedule immediate dealer service
+
+For proactive recall service:
+- Schedule service at your convenience
+- Inspection can be performed during regular maintenance
+- Both modules will be replaced even if symptoms only on one side
+
+Contact Information:
+- Nissan Consumer Affairs: 1-800-867-7669
+- Nissan Roadside Assistance: 1-877-664-7727
+- Nissan internal recall number: R23C05
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Temporary Lighting Solutions:
+If headlights fail and immediate service is not available:
+- Use high beams where legal and safe (switch to low beam for oncoming traffic)
+- Use fog lights if equipped
+- Avoid driving at night or in poor visibility conditions
+- Schedule service as soon as possible
+- Do not delay - driving without proper headlights is dangerous and illegal
+
+Driving Restrictions:
+Most states require functioning headlights for nighttime driving. Until repair:
+- Limit driving to daylight hours if possible
+- Avoid night driving unless absolutely necessary
+- If you must drive at night, use alternative lighting (high beams/fog lights)
+- Be aware of local laws regarding headlight requirements
+
+Parts Availability:
+Nissan has prioritized production of replacement LED driver modules. If parts are temporarily unavailable:
+- Dealer will place urgent parts order
+- You'll be notified immediately when parts arrive
+- Nissan may provide rental vehicle for customers unable to drive safely
+- High-beam function can be used as interim solution where legal
+
+Rental Vehicle Assistance:
+For customers who cannot safely operate their vehicle due to headlight failure:
+- Nissan will provide rental vehicle reimbursement
+- Up to $45 per day
+- Maximum 7 days while awaiting parts
+- Submit rental receipts to Nissan Consumer Affairs
+- Requires documentation of headlight failure preventing safe operation
+
+Reimbursement for Previous Repairs:
+Owners who have already paid for headlight driver module replacement should contact Nissan Consumer Affairs with:
+
+Required information:
+- Original repair invoice showing VIN
+- Detailed parts and labor breakdown
+- Mileage at time of repair
+- Description of headlight symptoms
+- Date of repair
+
+Submit reimbursement request:
+- Online: www.nissanusa.com/recalls/reimbursement
+- Phone: 1-800-867-7669
+- Mail: Nissan Consumer Affairs
+        PO Box 685003
+        Franklin, TN 37068-5003
+
+Nissan will process reimbursement requests within 6-8 weeks.
+
+Preventive Maintenance:
+To help identify potential headlight issues early:
+- Check headlight operation regularly
+- Have someone observe both headlights while you cycle them on/off
+- Check for even brightness between left and right sides
+- Monitor for flickering or dimming
+- Report any abnormalities to your dealer during routine service
+
+Additional Lighting Inspection:
+When you bring your vehicle for recall service, ask the dealer to inspect:
+- All exterior lighting functions
+- Light aim and adjustment
+- Lens condition (cracks, moisture, yellowing)
+- Wiring harness connections
+- Battery and charging system (weak battery can stress lighting modules)
+
+Insurance Notification:
+Some insurance companies may require notification of open recalls. Check with your insurance provider regarding their policy.
+
+Accident Reporting:
+If you experience a crash that may be related to headlight failure, report it to:
+- NHTSA: 1-888-327-4236 or www.safercar.gov
+- Nissan: 1-800-867-7669
+
+Online Resources:
+- Check recall status by VIN: www.nissanusa.com/recalls
+- Schedule service: MyNissan mobile app or online portal
+- View service history: www.mynissan.com
+- Recall FAQs: www.nissanusa.com/recalls/faq
+- Register for recall email notifications
+- Find nearest Nissan dealer
+
+Safety Reminder:
+Properly functioning headlights are critical for safety. Do not delay getting this recall repair completed. Your safety and the safety of others depends on being visible to other drivers and having adequate visibility of the road ahead.

@@ -1,0 +1,122 @@
+NHTSA Recall Number: 23V-556
+Manufacturer: General Motors LLC
+Model: Silverado 1500
+Year: 2023
+Component: Engine - Valve Lifter Assembly
+Manufacture Dates: February 2023 - July 2023
+Affected Vehicles: Approximately 178,000
+
+Description:
+The valve lifters in the 5.3L V8 engine may experience premature wear and failure due to inadequate lubrication. When a lifter fails, it can cause a ticking or tapping noise from the engine, rough idle, reduced engine performance, and in severe cases, catastrophic engine damage including bent pushrods, damaged valve train components, or internal engine failure requiring complete engine replacement.
+
+The root cause is an oil delivery issue where insufficient oil reaches the lifter bores under certain operating conditions. This is particularly problematic during cold starts or after extended periods of engine idling. The reduced oil flow allows metal-to-metal contact, accelerating wear on the lifter roller and causing eventual failure.
+
+Early warning signs include:
+- Ticking or tapping noise from engine, especially when cold
+- Rough or unstable idle
+- Check Engine Light with misfire codes
+- Reduced power or acceleration
+- Increased oil consumption
+
+If left unaddressed, lifter failure can cause severe engine damage. Immediate inspection is recommended if any symptoms are present.
+
+This recall affects 2023 Chevrolet Silverado 1500 trucks equipped with the 5.3L EcoTec3 V8 engine (RPO code L84). All cab configurations (Regular, Double, Crew) and trim levels (WT, Custom, LT, RST, LTZ, High Country) with this engine are affected.
+
+Remedy:
+GM dealers will perform a multi-stage repair depending on the condition of the engine:
+
+Stage 1 - No symptoms present:
+- Software update to oil pump control strategy
+- Replace engine oil and filter with specification upgrade
+- Add oil system conditioner
+- Functional test and monitoring
+
+Stage 2 - Early symptoms (noise only):
+- All Stage 1 items PLUS
+- Replace affected valve lifters (typically 2-8 lifters)
+- Inspect and replace pushrods if damaged
+- Clean oil galleries
+- Extended oil pressure monitoring
+
+Stage 3 - Severe damage:
+- Complete engine replacement with updated lifter design
+- Replace all affected components
+- Extended powertrain warranty coverage
+
+Repair time ranges from 2 hours (Stage 1) to 2-3 days (Stage 3 engine replacement). All repairs are free regardless of vehicle mileage or warranty status.
+
+Owner Action:
+If you hear unusual engine noise or experience symptoms:
+1. Avoid extended idling or high engine loads
+2. Check oil level and add if low (use 0W-20 synthetic only)
+3. Schedule immediate dealer inspection
+4. Do not ignore symptoms - early intervention prevents major damage
+
+For vehicles without symptoms:
+- Schedule inspection at convenience
+- Dealer will perform diagnostic tests
+- Preventive software update recommended
+
+Contact Information:
+- GM Customer Service: 1-800-222-1020
+- GM internal recall number: N232362480
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Diagnostic Codes Associated with This Issue:
+- P0300 - Random/Multiple Cylinder Misfire
+- P0301-P0308 - Cylinder-specific Misfire
+- P0521 - Engine Oil Pressure Sensor/Switch Range/Performance
+
+Oil Specification Requirements:
+Until recall repair is completed:
+- Use only Dexos1 Gen 3 0W-20 synthetic oil
+- Check oil level every fuel fill-up
+- Change oil every 3,000 miles (more frequent than normal)
+- Do not use oil additives unless directed by GM
+
+Extended Warranty Coverage:
+GM is providing extended warranty coverage for lifter-related issues:
+- 10 years / 150,000 miles from original in-service date
+- Covers lifters, pushrods, and related valve train components
+- Coverage transfers to subsequent owners
+- No deductible for covered repairs
+
+Alternative Transportation:
+For vehicles requiring Stage 3 engine replacement:
+- GM will provide rental vehicle reimbursement up to $50/day
+- Maximum 30 days coverage during repair
+- Submit receipts to GM Customer Service
+- Must be from major rental company
+
+Reimbursement for Previous Repairs:
+Owners who have paid for lifter replacement, valve train repairs, or engine replacement related to this issue should contact GM Customer Service with:
+- Repair order/invoice
+- Vehicle VIN and mileage at repair
+- Description of symptoms
+- Diagnostic trouble codes (if available)
+
+GM will review for reimbursement eligibility within 8-10 weeks.
+
+Prevention and Monitoring:
+To minimize risk until repair:
+- Avoid excessive idling (turn off engine if stopped >3 minutes)
+- Allow engine to warm up 30-60 seconds before driving
+- Use high-quality Dexos1 oil only
+- Monitor for unusual noises, especially at startup
+- Check oil level regularly
+
+If engine fails while driving:
+- Warning lights may illuminate
+- Engine power will reduce
+- Safely pull over
+- Turn off engine
+- Do not attempt to restart if severe noise heard
+- Call roadside assistance: 1-800-243-8872
+
+Online Resources:
+- Check recall status: www.gm.com/recalls
+- Owner Center: my.gm.com
+- Schedule service through myChevrolet app
+- View service history and recalls
+- Sign up for recall email notifications

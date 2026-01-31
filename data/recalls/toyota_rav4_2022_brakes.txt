@@ -1,0 +1,58 @@
+NHTSA Recall Number: 22V-567
+Manufacturer: Toyota
+Model: RAV4
+Year: 2022
+Component: Brake System - Master Cylinder
+Manufacture Dates: April 2022 - September 2022
+Affected Vehicles: Approximately 145,000
+
+Description:
+The brake master cylinder may develop an internal fluid leak due to improper sealing of the primary piston. This leak allows brake fluid to bypass the piston seals, resulting in reduced hydraulic pressure in the brake system. As the leak progresses, drivers may experience a soft or spongy brake pedal feel, increased pedal travel, and reduced braking performance.
+
+The defect is caused by a manufacturing error where the piston seal groove was machined to incorrect tolerances. Over time and repeated brake applications, the seals wear prematurely and allow fluid to leak internally. The issue typically manifests after 5,000-15,000 miles of operation.
+
+⚠️ WARNING: This is a safety-critical recall. Reduced brake performance significantly increases stopping distances and the risk of crashes. If you experience soft brakes, spongy pedal feel, or your brake warning light illuminates, stop driving the vehicle immediately and have it towed to a dealer.
+
+This recall affects 2022 Toyota RAV4 models including LE, XLE, XLE Premium, Adventure, TRD Off-Road, and Limited trim levels. Both gas and hybrid powertrains are affected.
+
+Remedy:
+Toyota dealers will inspect the brake master cylinder and replace it with an improved unit that meets correct specifications. The replacement includes:
+- Complete brake master cylinder assembly
+- Fresh DOT 4 brake fluid
+- Brake system bleeding and pressure testing
+- Pedal feel verification
+
+The repair takes approximately 2-3 hours. All parts and labor are provided free of charge.
+
+Priority repairs will be given to vehicles showing symptoms of brake issues.
+
+Owner Action:
+IMMEDIATE ACTION REQUIRED if experiencing brake issues:
+1. Do not drive the vehicle if braking performance is significantly reduced
+2. Contact Toyota Roadside Assistance: 1-800-331-4331
+3. Have the vehicle towed to the nearest Toyota dealer
+
+For scheduling non-emergency repairs:
+- Contact your Toyota dealer to schedule inspection
+- Toyota Customer Service: 1-800-331-4331
+- Toyota internal recall code: T22-BRK-04
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+Warning Signs Requiring Immediate Attention:
+- Brake pedal feels soft or spongy
+- Brake pedal travels further than normal
+- Brake warning light illuminated on dashboard
+- Increased stopping distance
+- Brake fluid level dropping (check reservoir)
+- Brake fluid visible under vehicle
+
+Interim Safety Measures:
+Until repair is completed:
+- Maintain extra following distance
+- Anticipate stops earlier
+- Check brake fluid level weekly
+- If brake performance degrades significantly, stop driving immediately
+
+Owner Reimbursement:
+Owners who have already paid for brake master cylinder replacement related to this issue may be eligible for reimbursement. Submit repair receipts to Toyota Customer Service for review.

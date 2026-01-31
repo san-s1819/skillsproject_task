@@ -1,0 +1,275 @@
+================================================================================
+AUTOMOTIVE RECALL RAG AGENT - TECHNICAL ARCHITECTURE
+================================================================================
+
+SYSTEM OVERVIEW
+---------------
+A Retrieval-Augmented Generation (RAG) system for automotive recall queries
+using lightweight TF-IDF embeddings and Google Gemini LLM.
+
+================================================================================
+CORE COMPONENTS
+================================================================================
+
+1. PROGRAMMING LANGUAGE
+   - Python 3.13
+   - Reason: Rich ML/AI ecosystem, easy prototyping
+
+2. VECTOR DATABASE
+   - ChromaDB 0.5.23 (Persistent Client)
+   - Storage: Local filesystem (chroma_db/ directory)
+   - Purpose: Store and retrieve document embeddings
+   - Features: Automatic persistence, cosine similarity search
+
+3. EMBEDDING MODEL
+   - TF-IDF (Term Frequency-Inverse Document Frequency)
+   - Implementation: scikit-learn 1.6.1 TfidfVectorizer
+   - Configuration:
+     * max_features: 1000 (vocabulary size)
+     * stop_words: 'english'
+     * ngram_range: (1, 2) (unigrams + bigrams)
+   - Embedding Dimension: 1000
+   - Type: Sparse, keyword-based (not neural)
+
+4. LANGUAGE MODEL (LLM)
+   - Model: Google Gemini 2.5 Flash Lite
+   - API: Direct REST API calls (no SDK)
+   - Endpoint: https://generativelanguage.googleapis.com/v1beta/models/
+   - Authentication: API key via environment variable
+   - Purpose: Natural language understanding and response generation
+
+5. DOCUMENT STORE
+   - Format: Plain text files (.txt)
+   - Location: data/recalls/
+   - Count: 15 recall documents
+   - Metadata: Extracted from filename (manufacturer_model_year_component.txt)
+
+================================================================================
+ARCHITECTURE FLOW
+================================================================================
+
+USER QUERY
+    ↓
+[1] QUERY EXPANSION (vector_store.py)
+    - Expand abbreviations (RAV4 → RAV4 RAV-4)
+    - Add synonyms (brake → brake braking)
+    ↓
+[2] TF-IDF VECTORIZATION (scikit-learn)
+    - Transform query to 1000-dimensional sparse vector
+    ↓
+[3] VECTOR SEARCH (ChromaDB)
+    - Cosine similarity search
+    - Retrieve top-k documents (default k=3)
+    ↓
+[4] CONFIDENCE SCORING (vector_store.py)
+    - Analyze similarity score distribution
+    - Calculate confidence: HIGH/MEDIUM/LOW
+    ↓
+[5] PROMPT CONSTRUCTION (llm_client.py)
+    - Format retrieved documents with [1], [2], [3] citations
+    - Add instructions for source attribution
+    ↓
+[6] LLM GENERATION (Gemini API)
+    - Generate response with inline citations
+    - Include "Sources:" section
+    ↓
+[7] RESPONSE DELIVERY
+    - Display confidence score
+    - Show cited sources
+    - Return formatted response
+
+================================================================================
+DEPENDENCIES
+================================================================================
+
+CORE LIBRARIES:
+- chromadb==0.5.23          # Vector database
+- scikit-learn==1.6.1       # TF-IDF vectorization
+- requests==2.32.3          # HTTP client for Gemini API
+
+TOTAL INSTALL SIZE: ~100MB
+
+NO HEAVY DEPENDENCIES:
+- No PyTorch
+- No TensorFlow
+- No Transformers
+- No CUDA/GPU requirements
+
+================================================================================
+DATA STRUCTURES
+================================================================================
+
+DOCUMENT OBJECT:
+{
+    'content': str,              # Full document text
+    'filename': str,             # Source filename
+    'filepath': str,             # Absolute path
+    'metadata': {
+        'manufacturer': str,     # e.g., 'honda'
+        'model': str,            # e.g., 'civic'
+        'year': str              # e.g., '2023'
+    }
+}
+
+RETRIEVAL RESULT:
+{
+    'documents': [               # List of retrieved documents
+        {
+            'rank': int,         # 1, 2, 3, ...
+            'document': {...},   # Document object
+            'similarity_score': float,  # 0.0 to 1.0
+            'distance': float    # ChromaDB distance metric
+        }
+    ],
+    'confidence': {
+        'level': str,            # 'HIGH', 'MEDIUM', 'LOW'
+        'score': float,          # Top similarity score
+        'gap': float,            # Score difference (top - second)
+        'reason': str            # Human-readable explanation
+    },
+    'query_expanded': bool,      # Whether query was expanded
+    'original_query': str,       # User's original query
+    'expanded_query': str        # Expanded version (if applicable)
+}
+
+================================================================================
+PERFORMANCE CHARACTERISTICS
+================================================================================
+
+INITIALIZATION:
+- First run: ~2 seconds (build TF-IDF index + ChromaDB)
+- Subsequent runs: ~1 second (load from ChromaDB)
+
+QUERY PROCESSING:
+- Query expansion: ~1ms
+- TF-IDF vectorization: ~5ms
+- ChromaDB search: ~10ms
+- Confidence calculation: ~1ms
+- LLM API call: ~2-3 seconds
+- TOTAL: ~2.5-3.5 seconds per query
+
+MEMORY USAGE:
+- Vector store: ~50MB
+- ChromaDB: ~20MB
+- Total runtime: ~100MB
+
+STORAGE:
+- TF-IDF index: ~100KB
+- ChromaDB database: ~2MB
+- Source documents: ~50KB
+
+================================================================================
+RETRIEVAL ALGORITHM
+================================================================================
+
+SIMILARITY METRIC: Cosine Similarity
+- Formula: cos(θ) = (A · B) / (||A|| × ||B||)
+- Range: -1 to 1 (ChromaDB converts to distance: 0 to 2)
+- Conversion: similarity_score = 1 - distance
+
+CONFIDENCE SCORING:
+- HIGH:   top_score > 0.7 AND score_gap > 0.15
+- MEDIUM: top_score > 0.4
+- LOW:    top_score ≤ 0.4
+
+QUERY EXPANSION RULES:
+- Model names: RAV4, Model 3/S/X/Y, F-150
+- Components: brake, airbag, seatbelt
+- Terms: recall/recalls
+
+================================================================================
+API INTEGRATION
+================================================================================
+
+GEMINI API:
+- Method: POST
+- URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent
+- Authentication: API key in query parameter
+- Request Format: JSON
+  {
+      "contents": [{
+          "parts": [{"text": "<prompt>"}]
+      }]
+  }
+- Response Format: JSON with candidates[0].content.parts[0].text
+- Retry Logic: 3 attempts with exponential backoff
+- Timeout: 30 seconds
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+LOGGING FORMAT: [ClassName.method_name] Error: {ErrorType}: {message}
+
+KEY ERROR POINTS:
+1. Vector Store Initialization
+   - Missing data directory → FileNotFoundError
+   - Document loading failures → UnicodeDecodeError
+   - ChromaDB corruption → KeyError
+
+2. LLM Client
+   - Missing API key → ValueError
+   - Rate limiting → 429 error with backoff
+   - Network issues → ConnectionError
+
+3. Query Processing
+   - Empty results → Return "no relevant information" message
+   - API failures → Retry with exponential backoff
+
+================================================================================
+SECURITY & CONFIGURATION
+================================================================================
+
+API KEY MANAGEMENT:
+- Storage: Environment variable (GEMINI_API_KEY)
+- Loading: python-dotenv from .env file
+- Never hardcoded in source code
+
+RATE LIMITING:
+- Gemini API: Free tier limits apply
+- Retry strategy: Exponential backoff (1s, 2s, 4s)
+- Max retries: 3
+
+================================================================================
+SCALABILITY CONSIDERATIONS
+================================================================================
+
+CURRENT LIMITATIONS:
+- Document count: 15 (small dataset)
+- TF-IDF features: 1000 (vocabulary limit)
+- No distributed processing
+- Single-threaded query processing
+
+SCALING OPTIONS:
+1. Increase max_features for larger vocabularies
+2. Add more documents (TF-IDF scales linearly)
+3. Implement batch processing for multiple queries
+4. Use ChromaDB's distributed mode for large datasets
+
+================================================================================
+DESIGN TRADE-OFFS
+================================================================================
+
+TF-IDF vs Neural Embeddings:
+✓ Pros: 5x smaller, faster, no GPU needed, interpretable
+✗ Cons: Weaker semantic understanding, keyword-dependent
+
+ChromaDB vs FAISS:
+✓ Pros: Automatic persistence, cleaner API, easier setup
+✗ Cons: Slightly slower for very large datasets
+
+Direct API vs SDK:
+✓ Pros: Minimal dependencies, full control, lightweight
+✗ Cons: Manual error handling, no automatic retries
+
+================================================================================
+VERSION INFORMATION
+================================================================================
+
+Python: 3.13
+ChromaDB: 0.5.23
+scikit-learn: 1.6.1
+Gemini Model: gemini-2.5-flash-lite
+API Version: v1beta
+
+Last Updated: 2026-01-29

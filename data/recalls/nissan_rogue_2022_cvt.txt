@@ -1,0 +1,186 @@
+NHTSA Recall Number: 22V-789
+Manufacturer: Nissan North America, Inc.
+Model: Rogue
+Year: 2022
+Component: Continuously Variable Transmission (CVT)
+Manufacture Dates: October 2021 - April 2022
+Affected Vehicles: Approximately 138,000
+
+Description:
+The continuously variable transmission (CVT) may experience belt slippage due to insufficient hydraulic pressure in the primary pulley. When belt slippage occurs, the transmission cannot effectively transfer engine power to the wheels, resulting in delayed acceleration, loss of power, or complete loss of forward or reverse drive capability.
+
+The issue is caused by a defective pressure control solenoid valve that fails to maintain proper hydraulic pressure. As the solenoid degrades, pressure drops below the minimum required to clamp the CVT belt between the pulleys, allowing the belt to slip. This condition worsens progressively and can lead to complete transmission failure.
+
+Symptoms include:
+- Delayed acceleration or "bogging down" when pressing gas pedal
+- High engine RPM without corresponding vehicle speed increase
+- Burning smell from transmission
+- Transmission warning light illuminated
+- Grinding or whining noise from transmission
+- Sudden loss of power while driving
+- Vehicle unable to move in Drive or Reverse
+
+⚠️ SAFETY CRITICAL: Loss of drive power while in traffic or at highway speeds creates a serious crash risk. If you experience sudden loss of power or inability to accelerate, safely pull over, turn on hazard lights, and have the vehicle towed.
+
+This recall affects 2022 Nissan Rogue SUV models including S, SV, SL, and Platinum trim levels. Both FWD and AWD configurations are affected. This issue is specific to the Xtronic CVT (transmission code JF016E) used in these model year vehicles.
+
+Remedy:
+Nissan dealers will update the CVT control module software and replace the pressure control solenoid valve assembly with an improved design. For vehicles showing signs of transmission damage, additional components may be replaced.
+
+Repair procedures based on vehicle condition:
+
+Stage 1 - No symptoms (preventive):
+- CVT control module software update to version X22-04
+- Replacement of pressure control solenoid valve
+- CVT fluid inspection and replacement if contaminated
+- Diagnostic verification test
+- Estimated repair time: 2-3 hours
+
+Stage 2 - Early symptoms present:
+- All Stage 1 items PLUS
+- Complete CVT fluid exchange with Nissan NS-3 fluid
+- Replacement of CVT filter
+- Inspection of pulleys and belt for wear
+- Extended road test verification
+- Estimated repair time: 3-4 hours
+
+Stage 3 - Significant damage or failure:
+- Complete CVT assembly replacement
+- All associated seals, gaskets, and mounts
+- Torque converter inspection and replacement if needed
+- Cooling system flush
+- Software updates
+- Estimated repair time: 1-2 days
+
+All repairs are provided free of charge regardless of vehicle mileage or warranty status.
+
+Owner Action:
+If experiencing symptoms:
+1. Reduce driving to essential trips only
+2. Avoid high-speed driving or heavy loads
+3. Do not tow trailers or carry maximum cargo
+4. Schedule immediate dealer inspection
+5. If loss of drive occurs, have vehicle towed - do not attempt to drive
+
+For vehicles without symptoms:
+- Schedule service at your convenience
+- Software update and solenoid replacement will be performed preventively
+- Early service may prevent transmission damage
+
+Contact Information:
+- Nissan Consumer Affairs: 1-800-867-7669
+- Nissan Roadside Assistance: 1-877-664-7727 (free towing to dealer if needed)
+- Nissan internal recall number: R22C08
+- NHTSA hotline: 1-888-327-4236
+- Website: www.safercar.gov
+
+CVT Fluid Specification:
+Only use Nissan NS-3 CVT fluid. Use of incorrect fluid will void warranty and can cause transmission damage. Never use:
+- ATF (automatic transmission fluid)
+- Generic CVT fluids
+- Transmission additives or conditioners
+
+Check CVT fluid level every 1,000 miles until recall service completed.
+
+Extended CVT Warranty:
+Nissan is providing extended warranty coverage for CVT-related issues:
+- 10 years / 120,000 miles from original purchase date
+- Covers CVT assembly, solenoids, sensors, and related components
+- Coverage includes towing to dealer
+- No deductible for covered repairs
+- Warranty transfers to subsequent owners
+- Coverage effective for all affected vehicles regardless of repair status
+
+Alternative Transportation:
+For vehicles requiring CVT replacement or unable to be driven:
+- Nissan will provide rental vehicle reimbursement
+- Up to $50 per day for up to 30 days
+- Rental must be from major rental company
+- Submit receipts to Nissan Consumer Affairs within 60 days
+- Requires dealer documentation of required repair time
+
+Interim Driving Guidelines:
+Until recall service is completed:
+- Accelerate gently - avoid sudden throttle inputs
+- Allow transmission to warm up for 30 seconds before driving
+- Maintain steady highway speeds rather than frequent acceleration
+- Avoid towing or heavy cargo loads
+- Monitor transmission temperature (if gauge equipped)
+- Stop immediately if burning smell detected
+
+Warning Indicators:
+Monitor for these dashboard warnings:
+- CVT temperature warning (red transmission symbol)
+- Transmission warning light
+- Check engine light with transmission codes
+- Reduced power warning
+
+If any of these illuminate:
+- Reduce speed immediately
+- Avoid high loads or extended high-speed driving
+- Schedule dealer inspection as soon as possible
+
+Reimbursement for Previous Repairs:
+Owners who have paid for CVT repairs related to this issue may be eligible for reimbursement:
+
+Eligible repairs include:
+- CVT pressure control solenoid replacement
+- CVT assembly replacement
+- Transmission control module replacement
+- CVT fluid services for slippage issues
+- Towing costs related to transmission failure
+
+Documentation required:
+- Complete repair invoice with VIN
+- Detailed description of symptoms
+- Diagnostic trouble codes
+- Mileage at time of repair
+- Payment receipts
+
+Submit reimbursement request:
+- Online: www.nissanusa.com/recalls/reimbursement
+- Phone: 1-800-867-7669 with reference number R22C08
+- Mail: Nissan Consumer Affairs - Reimbursement Dept
+        PO Box 685003
+        Franklin, TN 37068-5003
+
+Processing time: 8-10 weeks
+
+Technical Service Bulletins:
+Related TSBs for CVT issues:
+- NTB22-034 - CVT Shudder or Judder on Acceleration
+- NTB22-041 - CVT Whining Noise
+- NTB22-056 - CVT Software Update Procedure
+
+Ask your dealer about these related service bulletins during recall repair.
+
+CVT Maintenance After Repair:
+Following recall service:
+- Change CVT fluid every 30,000 miles (more frequent than standard schedule)
+- Have dealer inspect CVT fluid condition at each oil change
+- Monitor for any unusual noises or behaviors
+- Report any concerns immediately
+- Keep all service records
+
+Post-Repair Verification:
+After recall service is completed:
+- Test drive vehicle with technician if possible
+- Verify smooth operation in all driving modes
+- Ensure no warning lights are present
+- Obtain copy of completed repair order
+- Confirm repair is documented in your vehicle's service history
+
+Additional Resources:
+- MyNissan Owner Portal: www.mynissan.com
+- Nissan Owners Manual: Search "2022 Rogue CVT" for specific maintenance schedules
+- Schedule service online: MyNissan mobile app
+- Find nearest dealer: www.nissanusa.com/dealers
+- Recall status check by VIN: www.nissanusa.com/recalls
+- Sign up for recall notifications
+
+For Technical Support:
+Nissan Technical Support (for dealers and technicians): 1-800-NISSAN-1
+
+For General Questions:
+Nissan Consumer Affairs: 1-800-867-7669
+Email: consumeraffairs@nissanusa.com

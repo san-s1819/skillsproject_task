@@ -1,0 +1,38 @@
+NHTSA Recall Number: 21V-234
+Manufacturer: Honda
+Model: Accord
+Year: 2021
+Component: Transmission Control Module (TCM)
+Manufacture Dates: September 2020 - February 2021
+Affected Vehicles: Approximately 87,000
+
+Description:
+The transmission control module (TCM) software may cause delayed or harsh shifting between gears in vehicles equipped with the 10-speed automatic transmission. The issue manifests as hesitation when accelerating from a stop, unexpected downshifts during highway driving, or harsh engagement when shifting from Park to Drive or Reverse.
+
+The software error occurs when the TCM incorrectly interprets input from the transmission fluid temperature sensor. This causes the module to select inappropriate shift points and apply incorrect clutch pressures. The condition worsens in extreme temperatures and may lead to premature transmission wear if not addressed.
+
+In rare cases, the transmission may enter a "limp mode" that limits vehicle speed to protect the transmission components. When this occurs, the vehicle can still be driven but acceleration is significantly reduced.
+
+This recall affects 2021 Honda Accord models with the 2.0L turbocharged engine and 10-speed automatic transmission, including Sport, EX-L, and Touring trim levels.
+
+Remedy:
+Honda dealers will reprogram the transmission control module with updated software version TCM-2021-R2. The updated software corrects the temperature sensor interpretation logic and optimizes shift scheduling algorithms. The reprogramming procedure takes approximately 1 hour and is performed through the vehicle's OBD-II diagnostic port.
+
+No physical transmission components require replacement unless damage has occurred due to prolonged operation with the defective software. Dealers will inspect transmission fluid condition during the service.
+
+All recall repairs are provided free of charge regardless of vehicle mileage or warranty status.
+
+Owner Action:
+Contact your Honda dealer to schedule a service appointment. Bring the vehicle in for reprogramming as soon as convenient. While the vehicle remains safe to drive, continued operation may result in reduced transmission lifespan.
+
+Honda customer service: 1-888-234-2138
+Honda internal recall number: R21-089
+NHTSA hotline: 1-888-327-4236
+Website: www.safercar.gov
+
+Symptoms that may indicate this issue:
+- Delay when accelerating from a complete stop (1-2 second hesitation)
+- Transmission "hunting" between gears on highway
+- Hard or abrupt shifts
+- Check Engine Light with transmission-related codes
+- Reduced fuel economy
