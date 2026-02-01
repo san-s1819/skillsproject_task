@@ -1,202 +1,163 @@
 """
 LLM Client Module for Automotive Recall Agent
-Direct Gemini REST API integration (no heavy SDK dependencies)
+Uses Google GenAI SDK for Gemini API integration
 """
 
 import os
-import time
-import json
-from typing import Optional
-import requests
+from typing import List, Dict
+import google.genai as genai
 
 
 class GeminiClient:
-    """Client for Google Gemini API using direct REST calls (no SDK)"""
+    """Client for Google Gemini API using official SDK"""
     
-    def __init__(self, api_key: Optional[str] = None, model_name: str = "gemini-2.5-flash-lite"):
+    def __init__(self, api_key: str = None, model_name: str = "gemini-2.5-flash-lite"):
         """
-        Initialize Gemini client with direct REST API
+        Initialize Gemini client with official SDK
         
         Args:
-            api_key: Gemini API key (if None, reads from GEMINI_API_KEY env var)
-            model_name: Gemini model to use
+            api_key: Gemini API key (reads from GEMINI_API_KEY env var if not provided)
+            model_name: Model to use (default: gemini-2.0-flash-exp)
         """
         self.api_key = api_key or os.getenv('GEMINI_API_KEY')
+        self.model_name = model_name
         
         if not self.api_key:
             raise ValueError(
-                "Gemini API key not found. Set GEMINI_API_KEY environment variable "
+                "Gemini API key not found. Please set GEMINI_API_KEY environment variable "
                 "or pass api_key parameter."
             )
         
-        self.model_name = model_name
-        self.base_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
-        
-        print(f"Initialized Gemini client with model: {model_name}")
+        # Initialize the GenAI client
+        try:
+            self.client = genai.Client(api_key=self.api_key)
+            print(f"✓ Gemini client initialized (model: {self.model_name})")
+        except Exception as e:
+            raise ValueError(f"Failed to initialize Gemini client: {e}")
     
-    def generate_response(
-        self, 
-        prompt: str, 
-        max_retries: int = 3,
-        retry_delay: float = 1.0
-    ) -> str:
+    def generate_response(self, prompt: str) -> str:
         """
-        Generate response from Gemini API with retry logic using direct REST calls
+        Generate response using Gemini API
         
         Args:
             prompt: Input prompt for the model
-            max_retries: Maximum number of retry attempts
-            retry_delay: Delay between retries in seconds
             
         Returns:
             Generated text response
             
         Raises:
-            Exception: If all retries fail
+            Exception: If API call fails
         """
-        last_error = None
-        
-        for attempt in range(max_retries):
-            try:
-                # Prepare request payload
-                payload = {
-                    "contents": [{
-                        "parts": [{
-                            "text": prompt
-                        }]
-                    }]
-                }
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt
+            )
+            
+            # Extract text from response
+            if hasattr(response, 'text'):
+                return response.text
+            else:
+                raise ValueError("Unexpected response format from Gemini API")
                 
-                # Make API request
-                response = requests.post(
-                    f"{self.base_url}?key={self.api_key}",
-                    headers={"Content-Type": "application/json"},
-                    json=payload,
-                    timeout=30
+        except Exception as e:
+            error_msg = str(e)
+            
+            # Handle common errors
+            if 'API_KEY_INVALID' in error_msg or 'invalid api key' in error_msg.lower():
+                raise ValueError(
+                    "Invalid Gemini API key. Please check your GEMINI_API_KEY environment variable."
                 )
-                
-                # Check for errors
-                if response.status_code != 200:
-                    error_data = response.json() if response.text else {}
-                    error_msg = error_data.get('error', {}).get('message', response.text)
-                    raise Exception(f"API error ({response.status_code}): {error_msg}")
-                
-                # Parse response
-                data = response.json()
-                
-                # Extract text from response
-                if 'candidates' in data and len(data['candidates']) > 0:
-                    candidate = data['candidates'][0]
-                    if 'content' in candidate and 'parts' in candidate['content']:
-                        parts = candidate['content']['parts']
-                        if len(parts) > 0 and 'text' in parts[0]:
-                            return parts[0]['text']
-                
-                raise ValueError("Empty or invalid response from Gemini API")
-                
-            except requests.exceptions.Timeout:
-                last_error = "Request timeout"
-                print(f"Timeout. Retrying {attempt + 1}/{max_retries}...")
-                time.sleep(retry_delay)
-                continue
-                
-            except requests.exceptions.ConnectionError:
-                last_error = "Connection error"
-                print(f"Connection error. Retrying {attempt + 1}/{max_retries}...")
-                time.sleep(retry_delay)
-                continue
-                
-            except Exception as e:
-                last_error = e
-                error_msg = str(e).lower()
-                
-                # Check for rate limiting
-                if 'rate limit' in error_msg or 'quota' in error_msg or '429' in error_msg:
-                    wait_time = retry_delay * (2 ** attempt)  # Exponential backoff
-                    print(f"Rate limit hit. Waiting {wait_time}s before retry {attempt + 1}/{max_retries}...")
-                    time.sleep(wait_time)
-                    continue
-                
-                # For other errors, don't retry
-                else:
-                    raise
-        
-        # All retries failed
-        raise Exception(f"Failed after {max_retries} attempts. Last error: {last_error}")
+            elif 'quota' in error_msg.lower() or 'rate limit' in error_msg.lower():
+                raise Exception(
+                    "API rate limit exceeded. Please wait a moment and try again."
+                )
+            elif 'not found' in error_msg.lower() and 'model' in error_msg.lower():
+                raise ValueError(
+                    f"Model '{self.model_name}' not found. Please check the model name."
+                )
+            else:
+                raise Exception(f"Gemini API error: {error_msg}")
     
-    def create_recall_prompt(self, user_query: str, retrieved_docs: list) -> str:
+    def create_recall_prompt(self, user_query: str, retrieved_docs: List[Dict]) -> str:
         """
-        Create a prompt for recall queries with retrieved context and citation instructions
+        Create a prompt for recall-related queries with citations
         
         Args:
-            user_query: User's question
-            retrieved_docs: List of retrieved document dictionaries
+            user_query: User's question about recalls
+            retrieved_docs: List of retrieved document chunks with metadata
             
         Returns:
-            Formatted prompt string with citation support
+            Formatted prompt string with context and instructions
         """
-        # Build context from retrieved documents with numbered citations
+        # Format retrieved documents with numbered citations
         context_parts = []
-        source_list = []
-        
-        for i, doc_result in enumerate(retrieved_docs, 1):
-            doc = doc_result['document']
-            filename = doc['filename']
+        for i, doc_info in enumerate(retrieved_docs, 1):
+            doc = doc_info['document']
+            score = doc_info['similarity_score']
             
-            # Add numbered document with clear citation marker
-            context_parts.append(f"[{i}] {filename}")
-            context_parts.append(f"--- CONTENT ---")
-            context_parts.append(doc['content'])
-            context_parts.append("")
-            
-            # Build source list for reference
-            source_list.append(f"[{i}] {filename}")
+            context_parts.append(
+                f"[{i}] {doc['filename']}\n"
+                f"Relevance Score: {score:.4f}\n"
+                f"Content:\n{doc['content']}\n"
+            )
         
-        context = "\n".join(context_parts)
-        sources = "\n".join(source_list)
+        context = "\n---\n".join(context_parts)
         
         # Create prompt with citation instructions
-        prompt = f"""You are an automotive recall assistant helping customers understand vehicle recalls.
+        prompt = f"""You are an expert automotive recall assistant. Answer the user's question based ONLY on the provided recall documents.
 
-Use the following recall information to answer the user's question accurately and helpfully.
+IMPORTANT CITATION RULES:
+1. Use inline citations [1], [2], [3] to reference specific documents
+2. Cite sources for EVERY factual claim you make
+3. At the end of your response, include a "Sources:" section listing all referenced documents
+4. If the documents don't contain relevant information, say so clearly
 
-RECALL INFORMATION:
+RETRIEVED RECALL DOCUMENTS:
 {context}
 
 USER QUESTION:
 {user_query}
 
 INSTRUCTIONS:
-- Provide a clear, helpful response based on the recall information above
-- **IMPORTANT: Cite your sources using [1], [2], [3] etc. after each claim or fact**
-- Include specific recall numbers (e.g., 23V-456) when relevant
-- Mention affected vehicle details (year, make, model)
-- Explain the issue and the remedy
-- Use bullet points or structured formatting for clarity
-- If the question asks about a specific vehicle and you find relevant recalls, highlight them
-- If no relevant recalls are found in the provided information, say so clearly
-- Be professional and safety-conscious
-- **End your response with a "Sources:" section listing the documents you referenced**
+- Provide a clear, accurate answer based on the documents
+- Use numbered citations [1], [2], [3] for every claim
+- Be specific about recall numbers, affected vehicles, and remedies
+- Include a "Sources:" section at the end listing all cited documents
+- If information is missing or unclear, acknowledge this
 
-RESPONSE:"""
-        
+YOUR RESPONSE:"""
+
         return prompt
 
 
-def test_gemini_connection():
-    """Test function to verify Gemini API connection"""
+if __name__ == "__main__":
+    # Test the client
     try:
         client = GeminiClient()
-        test_prompt = "Say 'Hello, I am working!' in one sentence."
+        
+        # Test basic generation
+        test_prompt = "Explain what a vehicle recall is in one sentence."
         response = client.generate_response(test_prompt)
-        print(f"✓ Gemini API connection successful!")
-        print(f"Test response: {response}")
-        return True
+        print(f"\nTest Response:\n{response}")
+        
+        # Test recall prompt creation
+        test_docs = [
+            {
+                'document': {
+                    'filename': 'honda_civic_2023_fuel_pump.txt',
+                    'content': 'Test recall content...',
+                    'metadata': {'manufacturer': 'honda', 'model': 'civic', 'year': '2023'}
+                },
+                'similarity_score': 0.89
+            }
+        ]
+        
+        recall_prompt = client.create_recall_prompt(
+            "What recalls affect Honda Civic?",
+            test_docs
+        )
+        print(f"\nRecall Prompt Created (length: {len(recall_prompt)} chars)")
+        
     except Exception as e:
-        print(f"✗ Gemini API connection failed: {e}")
-        return False
-
-
-if __name__ == "__main__":
-    # Test the LLM client
-    test_gemini_connection()
+        print(f"Error: {e}")

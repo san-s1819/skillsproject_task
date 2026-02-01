@@ -1,31 +1,38 @@
 """
 Vector Store Module for Automotive Recall Agent
-ChromaDB with TF-IDF embeddings (lightweight, no neural models)
+ChromaDB with Sentence-Transformers semantic embeddings
 """
 
 import os
 from typing import List, Dict
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sentence_transformers import SentenceTransformer
 import chromadb
 from chromadb.config import Settings
 import numpy as np
 
 
 class VectorStore:
-    """Manages recall documents using ChromaDB with TF-IDF embeddings"""
+    """Manages recall documents using ChromaDB with semantic embeddings"""
     
-    def __init__(self, data_dir: str = "data/recalls", persist_dir: str = "chroma_db"):
+    def __init__(self, data_dir: str = "data/recalls", persist_dir: str = "chroma_db", 
+                 model_name: str = "all-MiniLM-L6-v2"):
         """
-        Initialize vector store with ChromaDB and TF-IDF
+        Initialize vector store with ChromaDB and Sentence Transformers
         
         Args:
             data_dir: Directory containing recall documents
             persist_dir: Directory to persist ChromaDB data
+            model_name: Sentence transformer model to use
         """
         self.data_dir = data_dir
         self.persist_dir = persist_dir
         self.documents = []
-        self.vectorizer = None
+        self.model_name = model_name
+        
+        # Initialize sentence transformer model
+        print(f"Loading embedding model: {model_name}...")
+        self.model = SentenceTransformer(model_name)
+        print(f"✓ Model loaded (embedding dimension: {self.model.get_sentence_embedding_dimension()})")
         
         # Initialize ChromaDB client with persistence
         self.client = chromadb.PersistentClient(path=persist_dir)
@@ -78,193 +85,68 @@ class VectorStore:
     
     def build_chroma_collection(self):
         """
-        Build ChromaDB collection with TF-IDF embeddings
+        Build ChromaDB collection with semantic embeddings
         """
         if not self.documents:
             error_msg = "No documents loaded. Call load_recall_documents() first."
             print(f"[VectorStore.build_chroma_collection] Error: {error_msg}")
             raise ValueError(error_msg)
         
-        print("Building ChromaDB collection with TF-IDF embeddings...")
+        print("Building ChromaDB collection with semantic embeddings...")
         
-        # Get or create collection
+        # Delete existing collection if it exists
         try:
-            # Try to get existing collection
-            self.collection = self.client.get_collection(name="recall_documents")
-            print(f"Loaded existing collection with {self.collection.count()} documents")
-            
-            # If collection exists and has correct count, we're done
-            if self.collection.count() == len(self.documents):
-                # Load the vectorizer metadata if available
-                try:
-                    metadata = self.collection.get(ids=["_vectorizer_"])
-                    if metadata and metadata['documents']:
-                        # Vectorizer is stored, we can use the existing collection
-                        print("Using existing TF-IDF vectorizer from collection")
-                        return
-                except:
-                    pass
-                
-                # Rebuild if vectorizer not found
-                print("Vectorizer not found, rebuilding collection...")
-                self.client.delete_collection(name="recall_documents")
-                self.collection = self.client.create_collection(name="recall_documents")
-            else:
-                # Delete and recreate if count doesn't match
-                print("Document count mismatch, rebuilding collection...")
-                self.client.delete_collection(name="recall_documents")
-                self.collection = self.client.create_collection(name="recall_documents")
-                
-        except Exception:
-            # Create new collection if it doesn't exist
-            self.collection = self.client.create_collection(name="recall_documents")
+            self.client.delete_collection(name="recall_documents")
+            print("Deleted existing collection")
+        except:
+            pass
         
-        # Build TF-IDF vectorizer
-        print("Creating TF-IDF embeddings...")
-        texts = [doc['content'] for doc in self.documents]
-        
-        self.vectorizer = TfidfVectorizer(
-            max_features=1000,  # Limit vocabulary size for efficiency
-            stop_words='english',
-            ngram_range=(1, 2)  # Use unigrams and bigrams
+        # Create new collection
+        self.collection = self.client.create_collection(
+            name="recall_documents",
+            metadata={"hnsw:space": "cosine"}  # Use cosine similarity
         )
         
-        # Fit and transform documents
-        tfidf_matrix = self.vectorizer.fit_transform(texts)
+        # Generate embeddings for all documents
+        print("Generating embeddings...")
+        texts = [doc['content'] for doc in self.documents]
+        embeddings = self.model.encode(
+            texts,
+            show_progress_bar=True,
+            convert_to_numpy=True
+        )
         
-        # Convert sparse matrix to dense for ChromaDB
-        embeddings = tfidf_matrix.toarray().tolist()
-        
-        # Add documents to collection
-        ids = []
-        documents = []
+        # Prepare data for ChromaDB
+        ids = [f"doc_{i}" for i in range(len(self.documents))]
         metadatas = []
         
-        for i, doc in enumerate(self.documents):
-            ids.append(f"doc_{i}")
-            documents.append(doc['content'])
-            metadatas.append({
+        for doc in self.documents:
+            metadata = {
                 'filename': doc['filename'],
                 'manufacturer': doc['metadata']['manufacturer'],
                 'model': doc['metadata']['model'],
                 'year': doc['metadata']['year']
-            })
+            }
+            metadatas.append(metadata)
         
+        # Add to collection
+        print("Adding documents to ChromaDB...")
         self.collection.add(
-            ids=ids,
-            documents=documents,
-            embeddings=embeddings,
-            metadatas=metadatas
+            embeddings=embeddings.tolist(),
+            documents=texts,
+            metadatas=metadatas,
+            ids=ids
         )
         
-        print(f"ChromaDB collection built with {self.collection.count()} documents")
-        print(f"TF-IDF features: {len(self.vectorizer.get_feature_names_out())}")
+        print(f"✓ Collection built with {len(self.documents)} documents")
     
-    def initialize(self):
-        """Initialize vector store (load or build collection)"""
-        print("Initializing vector store...")
-        
-        # Load documents
-        self.load_recall_documents()
-        
-        # Build or load ChromaDB collection
-        self.build_chroma_collection()
-        
-        # Rebuild vectorizer if needed
-        if self.vectorizer is None:
-            print("Rebuilding TF-IDF vectorizer...")
-            texts = [doc['content'] for doc in self.documents]
-            self.vectorizer = TfidfVectorizer(
-                max_features=1000,
-                stop_words='english',
-                ngram_range=(1, 2)
-            )
-            self.vectorizer.fit(texts)
-        
-        print("✓ Vector store initialized")
-    
-    def expand_query(self, query: str) -> str:
+    def retrieve_documents(self, query: str, top_k: int = 3) -> Dict:
         """
-        Expand query with common abbreviations and synonyms for better retrieval
+        Retrieve relevant documents using semantic search
         
         Args:
-            query: Original user query
-            
-        Returns:
-            Expanded query string
-        """
-        expanded = query
-        
-        # Common automotive abbreviations
-        expansions = {
-            'RAV4': 'RAV4 RAV-4',
-            'Model 3': 'Model 3 Model3',
-            'Model S': 'Model S ModelS',
-            'Model X': 'Model X ModelX',
-            'Model Y': 'Model Y ModelY',
-            'F-150': 'F-150 F150',
-            'brake': 'brake braking',
-            'recall': 'recall recalls',
-            'airbag': 'airbag air bag',
-            'seatbelt': 'seatbelt seat belt',
-        }
-        
-        # Apply expansions
-        for abbrev, expansion in expansions.items():
-            if abbrev.lower() in query.lower():
-                expanded = expanded.replace(abbrev, expansion)
-        
-        return expanded
-    
-    def calculate_retrieval_confidence(self, retrieved_docs: List[Dict]) -> dict:
-        """
-        Calculate confidence score for retrieval quality
-        
-        Args:
-            retrieved_docs: List of retrieved documents with similarity scores
-            
-        Returns:
-            Dictionary with confidence level and metadata
-        """
-        if not retrieved_docs:
-            return {
-                'level': 'LOW',
-                'score': 0.0,
-                'reason': 'No documents retrieved'
-            }
-        
-        scores = [doc['similarity_score'] for doc in retrieved_docs]
-        top_score = scores[0]
-        
-        # Calculate score gap (distinctiveness)
-        score_gap = scores[0] - scores[1] if len(scores) > 1 else 0
-        
-        # Determine confidence level
-        if top_score > 0.7 and score_gap > 0.15:
-            level = 'HIGH'
-            reason = f'Strong match (score: {top_score:.2f}, clear winner)'
-        elif top_score > 0.4:
-            level = 'MEDIUM'
-            reason = f'Moderate match (score: {top_score:.2f})'
-        else:
-            level = 'LOW'
-            reason = f'Weak match (score: {top_score:.2f})'
-        
-        return {
-            'level': level,
-            'score': top_score,
-            'gap': score_gap,
-            'reason': reason
-        }
-    
-    def retrieve_documents(self, query: str, top_k: int = 3, use_expansion: bool = True) -> dict:
-        """
-        Retrieve most relevant documents for a query with confidence scoring
-        
-        Args:
-            query: User's question
+            query: User's search query
             top_k: Number of documents to retrieve
-            use_expansion: Whether to apply query expansion
             
         Returns:
             Dictionary with retrieved documents, confidence, and metadata
@@ -274,43 +156,44 @@ class VectorStore:
             print(f"[VectorStore.retrieve_documents] Error: {error_msg}")
             raise ValueError(error_msg)
         
-        if self.vectorizer is None:
-            error_msg = "Vectorizer not initialized. Call initialize() first."
-            print(f"[VectorStore.retrieve_documents] Error: {error_msg}")
-            raise ValueError(error_msg)
+        # Generate query embedding
+        query_embedding = self.model.encode([query], convert_to_numpy=True)[0]
         
-        # Apply query expansion if enabled
-        original_query = query
-        if use_expansion:
-            query = self.expand_query(query)
-            expanded = query != original_query
-        else:
-            expanded = False
-        
-        # Transform query using TF-IDF vectorizer
-        query_vector = self.vectorizer.transform([query]).toarray().tolist()[0]
-        
-        # Search ChromaDB collection
+        # Search in ChromaDB
         results = self.collection.query(
-            query_embeddings=[query_vector],
+            query_embeddings=[query_embedding.tolist()],
             n_results=top_k
         )
         
-        # Prepare results
+        # Process results
         retrieved_docs = []
         
-        if results['ids'] and len(results['ids'][0]) > 0:
-            for i in range(len(results['ids'][0])):
-                doc_id = results['ids'][0][i]
-                doc_idx = int(doc_id.split('_')[1])
+        if results['documents'] and len(results['documents'][0]) > 0:
+            for i in range(len(results['documents'][0])):
+                doc_content = results['documents'][0][i]
+                metadata = results['metadatas'][0][i]
+                distance = results['distances'][0][i]
                 
-                result = {
-                    'rank': i + 1,
-                    'document': self.documents[doc_idx],
-                    'similarity_score': 1 - results['distances'][0][i],  # Convert distance to similarity
-                    'distance': results['distances'][0][i]
+                # Convert distance to similarity score (cosine distance -> similarity)
+                similarity_score = 1 - distance
+                
+                # Find original document
+                doc_dict = {
+                    'content': doc_content,
+                    'filename': metadata['filename'],
+                    'metadata': {
+                        'manufacturer': metadata['manufacturer'],
+                        'model': metadata['model'],
+                        'year': metadata['year']
+                    }
                 }
-                retrieved_docs.append(result)
+                
+                retrieved_docs.append({
+                    'rank': i + 1,
+                    'document': doc_dict,
+                    'similarity_score': similarity_score,
+                    'distance': distance
+                })
         
         # Calculate confidence
         confidence = self.calculate_retrieval_confidence(retrieved_docs)
@@ -318,22 +201,76 @@ class VectorStore:
         return {
             'documents': retrieved_docs,
             'confidence': confidence,
-            'query_expanded': expanded,
-            'original_query': original_query,
-            'expanded_query': query if expanded else None
+            'query_expanded': False,  # No query expansion needed with semantic search
+            'original_query': query,
+            'expanded_query': query
         }
+    
+    def calculate_retrieval_confidence(self, retrieved_docs: List[Dict]) -> Dict:
+        """
+        Calculate confidence score based on similarity scores
+        
+        Args:
+            retrieved_docs: List of retrieved documents with similarity scores
+            
+        Returns:
+            Dictionary with confidence level, score, and reason
+        """
+        if not retrieved_docs:
+            return {
+                'level': 'LOW',
+                'score': 0.0,
+                'gap': 0.0,
+                'reason': 'No documents retrieved'
+            }
+        
+        top_score = retrieved_docs[0]['similarity_score']
+        
+        # Calculate gap between top 2 scores
+        gap = 0.0
+        if len(retrieved_docs) > 1:
+            second_score = retrieved_docs[1]['similarity_score']
+            gap = top_score - second_score
+        
+        # Determine confidence level (adjusted for semantic embeddings)
+        if top_score > 0.7 and gap > 0.1:
+            level = 'HIGH'
+            reason = f'Strong semantic match (score: {top_score:.2f}, clear winner)'
+        elif top_score > 0.5:
+            level = 'MEDIUM'
+            reason = f'Moderate semantic match (score: {top_score:.2f})'
+        else:
+            level = 'LOW'
+            reason = f'Weak semantic match (score: {top_score:.2f})'
+        
+        return {
+            'level': level,
+            'score': top_score,
+            'gap': gap,
+            'reason': reason
+        }
+    
+    def initialize(self):
+        """
+        Initialize the vector store: load documents and build collection
+        """
+        print("Initializing vector store...")
+        self.load_recall_documents()
+        self.build_chroma_collection()
+        print("✓ Vector store initialized")
 
 
 if __name__ == "__main__":
     # Test the vector store
-    vs = VectorStore()
-    vs.initialize()
+    store = VectorStore()
+    store.initialize()
     
-    # Test query
-    test_query = "Honda Civic fuel pump recall"
-    results = vs.retrieve_documents(test_query, top_k=3)
+    # Test retrieval
+    test_query = "Honda Civic brake recall"
+    results = store.retrieve_documents(test_query, top_k=3)
     
     print(f"\nTest Query: {test_query}")
-    print(f"Retrieved {len(results)} documents:")
-    for result in results:
-        print(f"  Rank {result['rank']}: {result['document']['filename']} (score: {result['similarity_score']:.3f})")
+    print(f"Confidence: {results['confidence']['level']} - {results['confidence']['reason']}")
+    print(f"\nTop {len(results['documents'])} results:")
+    for doc in results['documents']:
+        print(f"  [{doc['rank']}] {doc['document']['filename']} (score: {doc['similarity_score']:.4f})")

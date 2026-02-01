@@ -1,6 +1,6 @@
-# Ultra-minimal dependencies for space-constrained VMs
-# Direct REST API calls (no heavy SDKs)
-# Total install size: ~30MB
+# Core dependencies
 chromadb==0.5.23
-scikit-learn==1.6.1
-requests==2.32.3
+sentence-transformers==5.2.2
+torch==2.10.0
+google-genai==1.61.0
+python-dotenv==1.2.1

@@ -22,21 +22,22 @@ CORE COMPONENTS
    - Features: Automatic persistence, cosine similarity search
 
 3. EMBEDDING MODEL
-   - TF-IDF (Term Frequency-Inverse Document Frequency)
-   - Implementation: scikit-learn 1.6.1 TfidfVectorizer
-   - Configuration:
-     * max_features: 1000 (vocabulary size)
-     * stop_words: 'english'
-     * ngram_range: (1, 2) (unigrams + bigrams)
-   - Embedding Dimension: 1000
-   - Type: Sparse, keyword-based (not neural)
+   - Model: Sentence-Transformers (all-MiniLM-L6-v2)
+   - Type: Neural semantic embeddings
+   - Implementation: sentence-transformers 5.2.2
+   - Backend: PyTorch 2.10.0 (CPU-optimized)
+   - Embedding Dimension: 384
+   - Speed: ~14,000 sentences/sec on CPU
+   - Quality: Excellent semantic understanding
+   - Benefits: Handles synonyms, paraphrasing, and semantic similarity
 
 4. LANGUAGE MODEL (LLM)
-   - Model: Google Gemini 2.5 Flash Lite
-   - API: Direct REST API calls (no SDK)
-   - Endpoint: https://generativelanguage.googleapis.com/v1beta/models/
+   - Model: Google Gemini 2.0 Flash Exp
+   - API: Google GenAI SDK (official Python library)
+   - SDK Version: google-genai 1.61.0
    - Authentication: API key via environment variable
    - Purpose: Natural language understanding and response generation
+   - Benefits: Cleaner code, automatic retries, better error handling
 
 5. DOCUMENT STORE
    - Format: Plain text files (.txt)
@@ -83,17 +84,20 @@ DEPENDENCIES
 ================================================================================
 
 CORE LIBRARIES:
-- chromadb==0.5.23          # Vector database
-- scikit-learn==1.6.1       # TF-IDF vectorization
-- requests==2.32.3          # HTTP client for Gemini API
+- chromadb==0.5.23              # Vector database
+- sentence-transformers==5.2.2  # Semantic embeddings
+- torch==2.10.0                 # PyTorch (CPU version)
+- google-genai==1.61.0          # Official Google Gemini SDK
+- python-dotenv==1.2.1          # Environment variable management
 
-TOTAL INSTALL SIZE: ~100MB
+TOTAL INSTALL SIZE: ~1GB (PyTorch + models)
 
-NO HEAVY DEPENDENCIES:
-- No PyTorch
-- No TensorFlow
-- No Transformers
-- No CUDA/GPU requirements
+BENEFITS OF SEMANTIC EMBEDDINGS:
+- Superior semantic understanding vs keyword matching
+- Handles synonyms automatically ("brake" = "stopping")
+- Better paraphrase detection
+- No query expansion needed
+- More accurate retrieval for natural language queries
 
 ================================================================================
 DATA STRUCTURES
@@ -164,36 +168,41 @@ RETRIEVAL ALGORITHM
 
 SIMILARITY METRIC: Cosine Similarity
 - Formula: cos(θ) = (A · B) / (||A|| × ||B||)
-- Range: -1 to 1 (ChromaDB converts to distance: 0 to 2)
-- Conversion: similarity_score = 1 - distance
+- Range: 0 to 1 (1 = identical, 0 = orthogonal)
+- ChromaDB uses cosine distance: distance = 1 - similarity
 
-CONFIDENCE SCORING:
-- HIGH:   top_score > 0.7 AND score_gap > 0.15
-- MEDIUM: top_score > 0.4
-- LOW:    top_score ≤ 0.4
+CONFIDENCE SCORING (Semantic Embeddings):
+- HIGH:   top_score > 0.7 AND score_gap > 0.1
+- MEDIUM: top_score > 0.5
+- LOW:    top_score ≤ 0.5
 
-QUERY EXPANSION RULES:
-- Model names: RAV4, Model 3/S/X/Y, F-150
-- Components: brake, airbag, seatbelt
-- Terms: recall/recalls
+QUERY PROCESSING:
+- No query expansion needed (semantic model handles variations)
+- Direct encoding: query → 384-dimensional embedding
+- Cosine similarity search in embedding space
 
 ================================================================================
 API INTEGRATION
 ================================================================================
 
-GEMINI API:
-- Method: POST
-- URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent
-- Authentication: API key in query parameter
-- Request Format: JSON
-  {
-      "contents": [{
-          "parts": [{"text": "<prompt>"}]
-      }]
-  }
-- Response Format: JSON with candidates[0].content.parts[0].text
-- Retry Logic: 3 attempts with exponential backoff
-- Timeout: 30 seconds
+GEMINI API (via SDK):
+- SDK: google-genai 1.61.0
+- Method: client.models.generate_content()
+- Model: gemini-2.0-flash-exp
+- Authentication: API key from environment variable
+- Code Example:
+  ```python
+  from google import genai
+  
+  client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
+  response = client.models.generate_content(
+      model="gemini-2.0-flash-exp",
+      contents=prompt
+  )
+  text = response.text
+  ```
+- Error Handling: Automatic retries built into SDK
+- Timeout: Configurable (default: 30 seconds)
 
 ================================================================================
 ERROR HANDLING
@@ -250,17 +259,19 @@ SCALING OPTIONS:
 DESIGN TRADE-OFFS
 ================================================================================
 
-TF-IDF vs Neural Embeddings:
-✓ Pros: 5x smaller, faster, no GPU needed, interpretable
-✗ Cons: Weaker semantic understanding, keyword-dependent
+Sentence-Transformers vs TF-IDF:
+✓ Pros: Semantic understanding, handles synonyms, better accuracy
+✗ Cons: Larger install size (~1GB vs ~100MB), slightly slower
+Decision: Using semantic embeddings for superior search quality
 
 ChromaDB vs FAISS:
 ✓ Pros: Automatic persistence, cleaner API, easier setup
 ✗ Cons: Slightly slower for very large datasets
 
-Direct API vs SDK:
-✓ Pros: Minimal dependencies, full control, lightweight
-✗ Cons: Manual error handling, no automatic retries
+Google GenAI SDK vs Direct REST API:
+✓ Pros: Cleaner code, automatic retries, better error handling, official support
+✗ Cons: Slightly larger install size (~50MB more)
+Decision: Using SDK for better maintainability and developer experience
 
 ================================================================================
 VERSION INFORMATION
@@ -269,7 +280,8 @@ VERSION INFORMATION
 Python: 3.13
 ChromaDB: 0.5.23
 scikit-learn: 1.6.1
-Gemini Model: gemini-2.5-flash-lite
+Google GenAI SDK: 1.61.0
+Gemini Model: gemini-2.0-flash-exp
 API Version: v1beta
 
-Last Updated: 2026-01-29
+Last Updated: 2026-01-30
